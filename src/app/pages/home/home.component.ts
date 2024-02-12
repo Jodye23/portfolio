@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  visibleInfo: boolean = false;
+  visibleCv: boolean = false;
 
+  showInfo() {
+    this.visibleInfo = true;
+  }
+
+  showCv() {
+    this.visibleCv = true;
+  }
 }

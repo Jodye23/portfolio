@@ -3,10 +3,11 @@
         class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
     >
         <section>
-            <span
+            <div
                 class="block text-6xl font-bold mb-1 fadeinup animation-duration-1000"
-                >Marco Valerio Torriero</span
             >
+                Marco Valerio Torriero
+            </div>
             <div
                 class="text-6xl text-primary font-bold mb-3 fadeinup animation-duration-1000"
             >
@@ -30,15 +31,57 @@
                 pRipple
                 label="Contatti"
                 type="button"
-                class="mr-3 p-button-raised fadein animation-duration-1000"
+                class="mr-3 p-button-raised fadeindown animation-duration-1000"
+                (click)="showInfo()"
             ></button>
+            <p-dialog
+                header="Informazioni personali"
+                [(visible)]="visibleInfo"
+                [style]="{ width: '30rem' }"
+            >
+                <div class="text-center">
+                    <p>
+                        <strong>Luogo e data di nascita: </strong> Roma,
+                        23/01/1999
+                    </p>
+                    <p>
+                        <strong>Residenza: </strong> Via Nicolò Paganini 4,
+                        Cerveteri (Roma)
+                    </p>
+                    <p><strong>Cellulare: </strong> 349-709-0707</p>
+
+                    <p>
+                        <strong>LinkedIn: </strong>
+                        <a href="https://t.ly/-Cz7C" target="_blank"
+                            >Marco Valerio Torriero</a
+                        >
+                    </p>
+                </div>
+            </p-dialog>
             <button
                 pButton
                 pRipple
-                label="Live CV"
+                label="CV"
                 type="button"
-                class="p-button-outlined fadein animation-duration-1000"
+                class="p-button-outlined fadeindown animation-duration-1000"
+                (click)="showCv()"
             ></button>
+            <p-dialog
+                header="CV"
+                [(visible)]="visibleCv"
+                [style]="{ width: '50vw' }"
+            >
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </p-dialog>
         </section>
     </div>
     <div class="col-12 md:col-6 overflow-hidden">
@@ -50,7 +93,7 @@
         />
     </div>
 </div>
-<div class="surface-section px-4 py-5 md:px-6 lg:px-8 text-center">
+<div class="surface-section px-4 py-3 md:px-6 lg:px-8 text-center">
     <div class="mb-5 font-bold text-3xl fadein animation-duration-1000">
         <span class="text-900">Skill </span>
         <span class="text-blue-600">principali</span>
@@ -61,57 +104,12 @@
                 class="p-3 shadow-2 mb-3 inline-block surface-card"
                 style="border-radius: 10px"
             >
-                <i class="pi pi-desktop text-4xl text-blue-500"></i>
+                <i class="pi pi-shield text-4xl text-blue-500"></i>
             </span>
-            <div class="text-900 text-xl mb-3 font-medium">
-                Built for Developers
-            </div>
+            <div class="text-900 text-xl mb-3 font-medium">Angular</div>
             <span class="text-700 line-height-3"
-                >Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.</span
-            >
-        </div>
-        <div class="col-12 md:col-4 mb-4 px-5">
-            <span
-                class="p-3 shadow-2 mb-3 inline-block surface-card"
-                style="border-radius: 10px"
-            >
-                <i class="pi pi-lock text-4xl text-blue-500"></i>
-            </span>
-            <div class="text-900 text-xl mb-3 font-medium">
-                End-to-End Encryption
-            </div>
-            <span class="text-700 line-height-3"
-                >Risus nec feugiat in fermentum posuere urna nec. Posuere
-                sollicitudin aliquam ultrices sagittis.</span
-            >
-        </div>
-        <div class="col-12 md:col-4 mb-4 px-5">
-            <span
-                class="p-3 shadow-2 mb-3 inline-block surface-card"
-                style="border-radius: 10px"
-            >
-                <i class="pi pi-check-circle text-4xl text-blue-500"></i>
-            </span>
-            <div class="text-900 text-xl mb-3 font-medium">Easy to Use</div>
-            <span class="text-700 line-height-3"
-                >Ornare suspendisse sed nisi lacus sed viverra tellus. Neque
-                volutpat ac tincidunt vitae semper.</span
-            >
-        </div>
-        <div class="col-12 md:col-4 mb-4 px-5">
-            <span
-                class="p-3 shadow-2 mb-3 inline-block surface-card"
-                style="border-radius: 10px"
-            >
-                <i class="pi pi-globe text-4xl text-blue-500"></i>
-            </span>
-            <div class="text-900 text-xl mb-3 font-medium">
-                Fast & Global Support
-            </div>
-            <span class="text-700 line-height-3"
-                >Fermentum et sollicitudin ac orci phasellus egestas tellus
-                rutrum tellus.</span
+                >Framework JavaScript per lo sviluppo di applicazioni web
+                dinamiche e interattive</span
             >
         </div>
         <div class="col-12 md:col-4 mb-4 px-5">
@@ -121,10 +119,50 @@
             >
                 <i class="pi pi-github text-4xl text-blue-500"></i>
             </span>
-            <div class="text-900 text-xl mb-3 font-medium">Open Source</div>
+            <div class="text-900 text-xl mb-3 font-medium">Git-Hub</div>
             <span class="text-700 line-height-3"
-                >Nec tincidunt praesent semper feugiat. Sed adipiscing diam
-                donec adipiscing tristique risus nec feugiat.
+                >Gestione del controllo versione distribuito per collaborare e
+                tracciare le modifiche nel codice sorgente</span
+            >
+        </div>
+        <div class="col-12 md:col-4 mb-4 px-5">
+            <span
+                class="p-3 shadow-2 mb-3 inline-block surface-card"
+                style="border-radius: 10px"
+            >
+                <i class="pi pi-desktop text-4xl text-blue-500"></i>
+            </span>
+            <div class="text-900 text-xl mb-3 font-medium">UX/UI Design</div>
+            <span class="text-700 line-height-3"
+                >Progettazione e sviluppo dell'esperienza utente e
+                dell'interfaccia utente per creare design intuitivi e
+                accattivanti</span
+            >
+        </div>
+        <div class="col-12 md:col-4 mb-4 px-5">
+            <span
+                class="p-3 shadow-2 mb-3 inline-block surface-card"
+                style="border-radius: 10px"
+            >
+                <i class="pi pi-globe text-4xl text-blue-500"></i>
+            </span>
+            <div class="text-900 text-xl mb-3 font-medium">Web Development</div>
+            <span class="text-700 line-height-3"
+                >Sviluppo di siti web e applicazioni utilizzando vari approcci
+                per garantire un'esperienza utente efficiente</span
+            >
+        </div>
+        <div class="col-12 md:col-4 mb-4 px-5">
+            <span
+                class="p-3 shadow-2 mb-3 inline-block surface-card"
+                style="border-radius: 10px"
+            >
+                <i class="pi pi-palette text-4xl text-blue-500"></i>
+            </span>
+            <div class="text-900 text-xl mb-3 font-medium">CSS</div>
+            <span class="text-700 line-height-3"
+                >Linguaggio di stile utilizzato per definire l'aspetto e la
+                formattazione degli elementi su pagine web
             </span>
         </div>
         <div class="col-12 md:col-4 md:mb-4 mb-0 px-3">
@@ -132,14 +170,15 @@
                 class="p-3 shadow-2 mb-3 inline-block surface-card"
                 style="border-radius: 10px"
             >
-                <i class="pi pi-shield text-4xl text-blue-500"></i>
+                <i class="pi pi-server text-4xl text-blue-500"></i>
             </span>
             <div class="text-900 text-xl mb-3 font-medium">
-                Trusted Securitty
+                Boostrap, PrimeNg ed altre librerie...
             </div>
             <span class="text-700 line-height-3"
-                >Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus
-                metus aliquam eleifend.</span
+                >Utilizzo di librerie come Bootstrap e PrimeNg per accelerare lo
+                sviluppo web e migliorare l'aspetto e le funzionalità delle
+                applicazioni</span
             >
         </div>
     </div>
