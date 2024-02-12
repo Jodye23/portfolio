@@ -1,0 +1,26 @@
+<div *ngIf="!isLoading" class="card">
+    <div class="text-center">
+        <h1>Wizard List</h1>
+    </div>
+
+    <div class="flex gap-6 flex-wrap">
+        <div
+            *ngFor="let wizard of wizards"
+            class="card text-center shadow-6 fadeinright animation-duration-1000"
+            style="width: 18rem"
+        >
+            <img
+                style="width: 100px"
+                src="https://images.vexels.com/media/users/3/241441/isolated/preview/25ef06f9b25e412df07c18d364811d8c-floating-wizard-illustration.png"
+                class="card-img-top"
+                alt="wizard card"
+            />
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ wizard.name }} {{ wizard.surname }}
+                </h5>
+                <p-button (click)="wizardDetail(wizard.id)">Detail</p-button>
+            </div>
+        </div>
+    </div>
+</div>

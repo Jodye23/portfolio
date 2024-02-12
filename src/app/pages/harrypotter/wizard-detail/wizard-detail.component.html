@@ -1,0 +1,31 @@
+<div *ngIf="!isLoading" class="card">
+    <div>
+        <p-button routerLink="/harry">Back to Wizard List</p-button>
+    </div>
+    <div class="text-center">
+        <div>
+            <h1 class="mb-4">{{ wizard.name }} {{ wizard.surname }}</h1>
+
+            <h3>Potion List</h3>
+        </div>
+    </div>
+
+    <div class="flex gap-4 flex-wrap">
+        <div
+            *ngFor="let elixir of wizard.elixirs"
+            class="card text-center shadow-6 flipright animation-duration-1000"
+            style="width: 18rem"
+        >
+            <img
+                style="width: 100px"
+                src="https://cdn-icons-png.flaticon.com/512/771/771212.png"
+                class="card-img-top"
+                alt="wizard card"
+            />
+            <div class="card-body">
+                <h5 class="card-title">{{ elixir.name }}</h5>
+                <p-button (click)="elixirDetail(elixir.id)">Detail</p-button>
+            </div>
+        </div>
+    </div>
+</div>

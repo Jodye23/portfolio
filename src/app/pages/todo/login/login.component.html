@@ -1,0 +1,51 @@
+<div class="card flex justify-content-center align-item-center">
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+        </div>
+
+        <div>
+            <form #form="ngForm" (ngSubmit)="save(form)">
+                <label for="username" class="block text-900 font-medium mb-2"
+                    >Username</label
+                >
+                <input
+                    type="text"
+                    #username="ngModel"
+                    [(ngModel)]="user.username"
+                    name="username"
+                    placeholder="Scrivi username..."
+                    pInputText
+                    class="w-full mb-3"
+                    required
+                    pAutoFocus [autofocus]="true"
+                />
+
+                <label for="password1" class="block text-900 font-medium mb-2"
+                    >Password</label
+                >
+                <input
+                    type="password"
+                    #password="ngModel"
+                    [(ngModel)]="user.password"
+                    name="password"
+                    placeholder="Scrivi password..."
+                    pInputText
+                    class="w-full mb-3"
+                    required
+                />
+            </form>
+
+            <button
+                pButton
+                pRipple
+                label="Accedi"
+                icon="pi pi-user"
+                class="w-full"
+                [disabled]="form.invalid"
+                (click)="loginUser()"
+                type="submit"
+            ></button>
+        </div>
+    </div>
+</div>

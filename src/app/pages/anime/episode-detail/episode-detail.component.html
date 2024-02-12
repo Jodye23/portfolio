@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="mb-2">
+        <p-button
+            label="Back to Anime"
+            [rounded]="true"
+            (click)="backtoAnime()"
+        ></p-button>
+        <p-button
+            label="Back to Home"
+            [rounded]="true"
+            (click)="backtoHome()"
+        ></p-button>
+    </div>
+
+    <p-table [tableStyle]="{ 'min-width': '60rem' }" [value]="[episode]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>N.</th>
+                <th>URL</th>
+                <th>Title Japanese</th>
+                <th>Title Romanji</th>
+                <th>Aired</th>
+                <th>Duration</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+            <tr style="cursor: pointer">
+                <td>{{ episode.mal_id }}</td>
+                <td><a [href]="episode.url">Episode URL</a></td>
+                <td>{{ episode.title_japanese }}</td>
+                <td>{{ episode.title_romanji }}</td>
+                <td>{{ episode.aired | date }}</td>
+                <td>{{ episode.duration / 60 | number : "1.2" }} min</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <p-card header="Synopsis" class="text-center">
+        <p class="m-0">
+            {{ episode.synopsis }}
+        </p>
+    </p-card>
+    <div class="flex gap-8" style="padding-left: 500px; padding-top: 200px">
+        <div>
+            <img
+                style="width: 100px"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/0db12a70971545.5bb5200aa97fe.gif"
+                alt=""
+            />
+        </div>
+        <div>
+            <img
+                style="width: 100px"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c2f58970971545.5bb5200aa8589.gif"
+                alt=""
+            />
+        </div>
+        <div>
+            <img
+                style="width: 100px"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fde25170971545.5bb5200aa934d.gif"
+                alt=""
+            />
+        </div>
+        <div>
+            <img
+                style="width: 100px"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6ccd2d70971545.5bb5200aaa3ad.gif"
+                alt=""
+            />
+        </div>
+        <div>
+            <img
+                style="width: 100px"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/122ffc70971545.5bb5200aa8c48.gif"
+                alt=""
+            />
+        </div>
+    </div>
+</div>

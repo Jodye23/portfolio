@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="card">
+    <p-table [value]="teams" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="caption">
+            <div class="flex">
+                <button
+                    pButton
+                    label="Clear"
+                    class="p-button-outlined"
+                    icon="pi pi-filter-slash"
+                    (click)="resetFilter()"
+                ></button>
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input
+                        [(ngModel)]="filterTerm"
+                        pInputText
+                        type="text"
+                        (input)="applyFilter()"
+                        placeholder="Search keyword"
+                        pTooltip="Cerca tramite qualsiasi parola chiave della tabella"
+                        tooltipPosition="left"
+                    />
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Abbreviazione</th>
+                <th>Nome completo</th>
+                <th>Conference</th>
+                <th>Division</th>
+                <th>Preferite</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-team>
+            <tr
+                class="transition-colors transition-duration-500 bg-none hover:bg-primary"
+            >
+                <td>{{ team.abbreviation }}</td>
+                <td>{{ team.full_name }}</td>
+                <td>{{ team.conference }}</td>
+                <td>{{ team.division }}</td>
+                <td>
+                    <i
+                        [style]="{ color: 'orange' }"
+                        [text]="true"
+                        (click)="toggleFavorite(team)"
+                        [class]="
+                            team.favorite ? 'pi pi-star' : 'pi pi-star-fill'
+                        "
+                    ></i>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

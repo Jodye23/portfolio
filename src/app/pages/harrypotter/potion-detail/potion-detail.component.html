@@ -1,0 +1,96 @@
+<div *ngIf="!isLoading">
+    <div class="card">
+        <div class="flex">
+            <p-button routerLink="/harry">Back to Wizard List</p-button>
+            <p-button styleClass="p-button-secondary" (click)="backtoWizard()"
+                >Back to Wizard Detail</p-button
+            >
+        </div>
+        <h1>Elixir Detail</h1>
+        <h4 class="my-4">{{ elixir.name }}</h4>
+        <p *ngIf="elixir.effect">
+            <strong>Effects: </strong>{{ elixir.effect }}
+        </p>
+        <p *ngIf="elixir.sideEffects">
+            <strong>Side Effects: </strong>{{ elixir.sideEffects }}
+        </p>
+        <p *ngIf="elixir.characteristics">
+            <strong>Characteristics: </strong>{{ elixir.characteristics }}
+        </p>
+        <p *ngIf="elixir.manufacturer">
+            <strong>Manufacturer: </strong>{{ elixir.manufacturer }}
+        </p>
+        <p *ngIf="elixir.difficulty">
+            <strong>Difficulty: </strong>{{ elixir.difficulty }}
+        </p>
+        <p *ngIf="elixir.time"><strong>Time: </strong>{{ elixir.time }}</p>
+
+        <div class="mt-5">
+            <div *ngIf="elixir.ingredients.length">
+                <p-table
+                    [value]="elixir.ingredients"
+                    [tableStyle]="{ 'min-width': '60rem' }"
+                >
+                    <ng-template pTemplate="caption">
+                        <div
+                            class="flex align-items-center justify-content-between"
+                        >
+                            Ingredients List
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-ingredient>
+                        <tr
+                            style="cursor: pointer"
+                            class="transition-colors transition-duration-500 bg-none hover:bg-primary"
+                        >
+                            <td>{{ ingredient.name }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+            <div *ngIf="!elixir.ingredients.length">
+                <p>Non sono presenti ingredienti</p>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div *ngIf="elixir.inventors.length">
+                <p-table
+                    [value]="elixir.inventors"
+                    [tableStyle]="{ 'min-width': '60rem' }"
+                >
+                    <ng-template pTemplate="caption">
+                        <div
+                            class="flex align-items-center justify-content-between"
+                        >
+                            Inventors List
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-inventor>
+                        <tr
+                            (click)="inventorDetail(inventor.id)"
+                            style="cursor: pointer"
+                            class="transition-colors transition-duration-500 bg-none hover:bg-primary"
+                        >
+                            <td>{{ inventor.name }}</td>
+                            <td>{{ inventor.surname }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+            <div *ngIf="!elixir.inventors.length">
+                <p>Non sono presenti inventori</p>
+            </div>
+        </div>
+    </div>
+</div>

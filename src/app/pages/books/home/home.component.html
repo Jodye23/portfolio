@@ -1,0 +1,40 @@
+<div class="card">
+    <h1 class="text-center">LIBRERIA</h1>
+    <div class="grid ml-8">
+        <div
+            *ngFor="let book of books"
+            class="col-6 zoominup animation-duration-1000"
+        >
+            <p-card [style]="{ width: '600px' }">
+                <div class="flex">
+                    <div>
+                        <img
+                            alt="{{ book.title }}"
+                            [src]="book.imageUrl"
+                            style="width: 100px"
+                        />
+                    </div>
+                    <div class="ml-7">
+                        <h3>{{ book.title }}</h3>
+                        <p>
+                            <strong>{{ book.author }}</strong
+                            ><small>({{ book.publicationYear }})</small>
+                        </p>
+                        <p><strong>Trama:</strong></p>
+                        <p>
+                            {{ book.synopsis }}
+                        </p>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <p-button
+            label="Dona un libro"
+            [rounded]="true"
+            (click)="goToLibrary()"
+        ></p-button>
+    </div>
+</div>

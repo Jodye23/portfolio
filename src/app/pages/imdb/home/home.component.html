@@ -1,0 +1,116 @@
+<div class="card">
+    <h1 class="text-center">IMDB</h1>
+
+    <span class="p-float-label p-fluid">
+        <p-autoComplete
+            inputId="float-label"
+            field="#TITLE"
+            [(ngModel)]="searchInput"
+            [suggestions]="searchResults"
+            (completeMethod)="searchMovies()"
+            pTooltip="Il film che selezionerai apparirà in fondo alla pagina"
+            tooltipPosition="bottom"
+            pAutoFocus
+            [autofocus]="true"
+        >
+            <ng-template let-movie pTemplate="item">
+                <div
+                    class="flex align-items-center gap-2"
+                    (click)="selectMovie(movie['#IMDB_ID'])"
+                >
+                    <div>
+                        <strong>Film: </strong>{{ movie["#TITLE"] }} -
+                        <strong>Year: </strong>{{ movie["#YEAR"] }} -
+                        <strong>Actors: </strong>{{ movie["#ACTORS"] }}
+                    </div>
+                </div>
+            </ng-template></p-autoComplete
+        >
+        <label for="float-label">Cerca un film</label>
+    </span>
+
+    <div class="mt-4">
+        <p-carousel
+            [value]="exampleMovies"
+            numVisible="3"
+            numScroll="3"
+            [circular]="true"
+            [autoplayInterval]="3000"
+        >
+            <ng-template let-movie pTemplate="item">
+                <p-card
+                    [header]="movie.title"
+                    [subheader]="movie.year"
+                    class="text-center"
+                >
+                    <img
+                        [src]="movie.image"
+                        alt="Movie Image"
+                        style="width: 400px; height: 550px"
+                    />
+                    <p-footer>
+                        <p>{{ movie.description }}</p>
+                    </p-footer>
+                </p-card>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+    <div
+        *ngIf="selectedMovie"
+        class="card mt-2 shadow-6 zoomindown animation-duration-1000"
+    >
+        <div class="flex align-items-center justify-content-center">
+            <div>
+                <img
+                    style="max-width: 400px"
+                    [src]="selectedMovie.image"
+                    alt="{{ selectedMovie.title }}"
+                />
+            </div>
+            <div class="pl-5">
+                <div>
+                    <h2>{{ selectedMovie.title }}</h2>
+                    <p>
+                        <small
+                            ><strong>Year:</strong>
+                            {{ selectedMovie.year }}</small
+                        >
+                    </p>
+                    <p>
+                        <small
+                            ><strong>Contents:</strong> <br />{{
+                                selectedMovie.keywords
+                            }}</small
+                        >
+                    </p>
+                    <p>
+                        <strong>Genres:</strong> <br />
+                        {{ selectedMovie.genre }}
+                    </p>
+                    <p>
+                        <strong>Plot:</strong> <br />
+                        {{ selectedMovie.description }}
+                    </p>
+                    <div class="mt-8">
+                        <strong class="flex justify-content-center"
+                            >Rate:</strong
+                        >
+                        <br />
+                        <div class="flex justify-content-center">
+                            <p-rating [(ngModel)]="value"></p-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p-scrollTop
+            target="window"
+            styleClass="custom-scrolltop"
+            [threshold]="100"
+            icon="pi pi-arrow-up"
+        ></p-scrollTop>
+    </div>
+</div>

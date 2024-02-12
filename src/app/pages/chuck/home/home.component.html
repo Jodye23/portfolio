@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="text-center">
+        <h1>CHUCK NORRIS</h1>
+    </div>
+    <div class="text-center">
+        <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c35ecfb5-51c0-4d28-85a3-11eb9358db4b/d6wjdsx-7d49de1a-cadf-419b-809b-fc77e362e078.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzNWVjZmI1LTUxYzAtNGQyOC04NWEzLTExZWI5MzU4ZGI0YlwvZDZ3amRzeC03ZDQ5ZGUxYS1jYWRmLTQxOWItODA5Yi1mYzc3ZTM2MmUwNzgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yTQvgcfTnBf7EDjpHHVqoS6qBcjJQ16ie76PGUH3EME"
+            style="width: 80px"
+        />
+    </div>
+    <h2 class="text-center"><strong>Fai la tua scelta</strong></h2>
+    <div class="text-center">
+        <p *ngIf="battutaRandom" id="joke" class="pl-5">
+            <strong>Battuta:</strong> {{ battutaRandom }}
+        </p>
+    </div>
+
+    <div class="text-center pt-2">
+        <p-button (click)="resetBattuta()" severity="warning">Reset</p-button>
+    </div>
+    <div>
+        <p-button (click)="mostraBattutaRandom()"> Battuta Random </p-button>
+    </div>
+    <div style="padding-top: 10px">
+        <p-button (click)="toggleMostraCategorie()" severity="secondary">
+            {{ isCollapsed ? "Mostra Categorie" : "Nascondi Categorie" }}
+        </p-button>
+        <div *ngIf="categorieBattute.length > 0">
+            <h3 style="padding-top: 10px">Categorie:</h3>
+            <div class="flex gap-5 flex-wrap">
+                <div
+                    class="card text-center shadow-6 flipright animation-duration-1000"
+                    *ngFor="let categoria of categorieBattute"
+                    style="cursor: pointer"
+                    id="categ"
+                    (click)="mostraBattutaRandomByCategoria(categoria)"
+                >
+                    <img
+                        style="width: 50px"
+                        src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-a-boy-laughing-very-happy-illustration-png-image_539684.jpg"
+                        alt=""
+                    />
+                    <h5>
+                        {{ categoria }}
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
