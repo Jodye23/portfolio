@@ -83,6 +83,27 @@
                     />
                 </div>
             </p-dialog>
+            <button
+                pButton
+                pRipple
+                label="Progetto Figma"
+                type="button"
+                class="ml-3 p-button-raised fadeindown animation-duration-1000"
+                (click)="showFigma()"
+            ></button>
+            <p-dialog
+                header="CV"
+                [(visible)]="visibleFigma"
+                [style]="{ width: '30rem' }"
+            >
+                <div class="flex align-item-center justify-content-center">
+                    <video
+                        autoplay
+                        src="assets/video app figma.mp4"
+                        style="width: 100%"
+                    ></video>
+                </div>
+            </p-dialog>
         </section>
     </div>
     <div class="col-12 md:col-6 overflow-hidden">

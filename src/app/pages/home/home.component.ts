@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   visibleInfo: boolean = false;
   visibleCv: boolean = false;
+  visibleFigma: boolean = false;
   email = 'torrieromarcovalerio@gmail.com';
 
   showInfo() {
@@ -16,5 +17,9 @@ export class HomeComponent {
 
   showCv() {
     this.visibleCv = true;
+  }
+
+  showFigma() {
+    this.visibleFigma = true;
   }
 }
