@@ -8,14 +8,13 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavbarComponent {
   items: MenuItem[] | undefined = [];
-  activeItem: MenuItem | undefined;
 
 
   ngOnInit() {
     this.items = [
-      { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: ['/nba'] },
-      { label: 'Teams', icon: 'pi pi-fw pi-users', routerLink: ['teams'] },
+      { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: ['/nba/home'] },
+      { label: 'Teams', icon: 'pi pi-fw pi-users', routerLink: ['/nba/teams'] },
     ];
-    this.activeItem = this.items[0];
   }
+
 }

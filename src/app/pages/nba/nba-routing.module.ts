@@ -5,12 +5,17 @@ import { TeamsComponent } from './teams/teams.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {
     path: 'teams',
     component: TeamsComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 
