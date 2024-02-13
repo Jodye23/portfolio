@@ -1,33 +1,37 @@
 <div class="card">
-    <h1 class="text-center">IMDB</h1>
+    <div class="text-6xl text-primary font-bold mb-3 text-center">IMDB</div>
 
-    <span class="p-float-label p-fluid">
-        <p-autoComplete
-            inputId="float-label"
-            field="#TITLE"
-            [(ngModel)]="searchInput"
-            [suggestions]="searchResults"
-            (completeMethod)="searchMovies()"
-            pTooltip="Il film che selezionerai apparirà in fondo alla pagina"
-            tooltipPosition="bottom"
-            pAutoFocus
-            [autofocus]="true"
-        >
-            <ng-template let-movie pTemplate="item">
-                <div
-                    class="flex align-items-center gap-2"
-                    (click)="selectMovie(movie['#IMDB_ID'])"
+    <div class="flex align-item-center justify-content-center">
+        <div style="width: 50rem">
+            <span class="p-float-label p-fluid">
+                <p-autoComplete
+                    inputId="float-label"
+                    field="#TITLE"
+                    [(ngModel)]="searchInput"
+                    [suggestions]="searchResults"
+                    (completeMethod)="searchMovies()"
+                    pTooltip="Il film che selezionerai apparirà in fondo alla pagina"
+                    tooltipPosition="bottom"
+                    pAutoFocus
+                    [autofocus]="true"
                 >
-                    <div>
-                        <strong>Film: </strong>{{ movie["#TITLE"] }} -
-                        <strong>Year: </strong>{{ movie["#YEAR"] }} -
-                        <strong>Actors: </strong>{{ movie["#ACTORS"] }}
-                    </div>
-                </div>
-            </ng-template></p-autoComplete
-        >
-        <label for="float-label">Cerca un film</label>
-    </span>
+                    <ng-template let-movie pTemplate="item">
+                        <div
+                            class="flex align-items-center gap-2"
+                            (click)="selectMovie(movie['#IMDB_ID'])"
+                        >
+                            <div>
+                                <strong>Film: </strong>{{ movie["#TITLE"] }} -
+                                <strong>Year: </strong>{{ movie["#YEAR"] }} -
+                                <strong>Actors: </strong>{{ movie["#ACTORS"] }}
+                            </div>
+                        </div>
+                    </ng-template></p-autoComplete
+                >
+                <label for="float-label">Cerca un film</label>
+            </span>
+        </div>
+    </div>
 
     <div class="mt-4">
         <p-carousel

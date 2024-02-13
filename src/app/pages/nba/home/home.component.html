@@ -1,14 +1,14 @@
 <app-navbar></app-navbar>
-<div class="card shadow-6 p-col">
-    <div class="ml-6">
-        <div class="flex">
+<div class="card">
+    <div>
+        <div class="flex align-items-center justify-content-center">
             <img
                 [style]="{ width: '100%', maxWidth: '30rem' }"
                 src="https://www.itl.cat/pngfile/big/95-955352_basketball-gif.gif"
                 alt="NBA Logo"
             />
             <div class="ml-5">
-                <h1>NBA APP</h1>
+                <div class="text-6xl text-primary font-bold mb-3">NBA APP</div>
                 <p>
                     Benvenuti, per tutti gli appassionati di palla canestro !
                     <br />
@@ -20,7 +20,8 @@
         </div>
 
         <div
-            class="flex-initial flex align-items-center justify-content-center p-jc-around"
+            class="flex align-items-center justify-content-center mt-3"
+            style="padding-left: 300px"
         >
             <p-button
                 class="flipleft animation-duration-1000"
@@ -57,7 +58,7 @@
                 severity="warning"
             ></p-button>
         </div>
-        <div class="flex flex-row flex-wrap pl-5">
+        <div class="flex gap-3 align-items-center justify-content-center">
             <p-card
                 class="flex m-5 text-center shadow-6 zoomindown animation-duration-1000"
                 header="STATS"

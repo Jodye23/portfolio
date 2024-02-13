@@ -1,22 +1,24 @@
 <div class="card">
-    <h1 class="text-center">ANIME</h1>
-    <p-inputGroup>
-        <input
-            type="text"
-            pInputText
-            placeholder="Scrivi il titolo di un Anime"
-            id="searchInput"
-            [(ngModel)]="search"
-            pAutoFocus
-            [autofocus]="true"
-        />
-        <button
-            type="button"
-            pButton
-            icon="pi pi-search"
-            (click)="searchAnime()"
-        ></button>
-    </p-inputGroup>
+    <div class="text-6xl text-primary font-bold mb-3 text-center">ANIME</div>
+    <div class="flex align-item-center justify-content-center mb-3">
+        <p-inputGroup>
+            <input
+                type="text"
+                pInputText
+                placeholder="Scrivi il titolo di un Anime"
+                id="searchInput"
+                [(ngModel)]="search"
+                pAutoFocus
+                [autofocus]="true"
+            />
+            <button
+                type="button"
+                pButton
+                icon="pi pi-search"
+                (click)="searchAnime()"
+            ></button>
+        </p-inputGroup>
+    </div>
 
     <p-table
         [value]="animeList"

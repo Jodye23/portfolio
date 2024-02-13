@@ -1,95 +1,104 @@
 <div class="card">
+    <div class="text-6xl text-primary font-bold mb-3 text-center">TASK</div>
     <p-button (click)="logoutUser()" severity="danger">Logout</p-button>
-    <div class="d-flex justify-content-end my-1">
+    <div class="my-3 text-center">
         <button pButton (click)="openFormTaskModal()">Aggiungi Task</button>
     </div>
 
-    <p-table
-        [value]="(todoList$ | async).todo"
-        [tableStyle]="{ 'min-width': '60rem' }"
-    >
-        <ng-template pTemplate="caption">
-            <div class="flex align-items-center justify-content-between">
-                Fatti
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Status</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-todo>
-            <tr style="cursor: pointer">
-                <th scope="row">1</th>
-                <td>{{ todo.title }}</td>
-                <td>{{ todo.description }}</td>
-                <td>
-                    <!-- {{todo.status}} -->
-                    <div ngbDropdown class="d-inline-block">
-                        <span
-                            type="button"
-                            id="dropdownBasic1"
-                            ngbDropdownToggle
-                        >
-                            <strong>{{ todo.status }}</strong>
-                        </span>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                            <p-button
-                                *ngFor="let type of typeTodoStatus"
-                                severity="success"
-                                (click)="changeStatus(type, todo.id)"
-                            >
-                                {{ type }}
-                            </p-button>
+    <div class="my-5">
+        <p-table
+            [value]="(todoList$ | async).todo"
+            [tableStyle]="{ 'min-width': '60rem' }"
+        >
+            <ng-template pTemplate="caption">
+                <div class="flex align-items-center justify-content-between">
+                    Completate
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-todo>
+                <tr style="cursor: pointer">
+                    <td>
+                        <i
+                            class="pi pi-check-circle"
+                            style="font-size: 1.5rem"
+                        ></i>
+                    </td>
+                    <td>{{ todo.title }}</td>
+                    <td>{{ todo.description }}</td>
+                    <td>
+                        <!-- {{todo.status}} -->
+                        <div>
+                            <span>
+                                <strong>{{ todo.status }}</strong>
+                            </span>
+                            <div class="my-2">
+                                <p-button
+                                    *ngFor="let type of typeTodoStatus"
+                                    severity="success"
+                                    (click)="changeStatus(type, todo.id)"
+                                >
+                                    {{ type }}
+                                </p-button>
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
-    <p-table
-        [value]="(todoList$ | async).notTodo"
-        [tableStyle]="{ 'min-width': '60rem' }"
-    >
-        <ng-template pTemplate="caption">
-            <div class="flex align-items-center justify-content-between">
-                Da fare
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Status</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-todo>
-            <tr style="cursor: pointer">
-                <th scope="row">1</th>
-                <td>{{ todo.title }}</td>
-                <td>{{ todo.description }}</td>
-                <td>
-                    <!-- {{todo.status}} -->
-                    <div class="inline-block">
-                        <span type="button" id="dropdownBasic1">
-                            {{ todo.status }}
-                        </span>
-                        <div aria-labelledby="dropdownBasic1">
-                            <p-button
-                                severity="secondary"
-                                *ngFor="let type of typeTodoStatus"
-                                (click)="changeStatus(type, todo.id)"
-                            >
-                                {{ type }}
-                            </p-button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+
+    <div>
+        <p-table
+            [value]="(todoList$ | async).notTodo"
+            [tableStyle]="{ 'min-width': '60rem' }"
+        >
+            <ng-template pTemplate="caption">
+                <div class="flex align-items-center justify-content-between">
+                    Da fare
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-todo>
+                <tr style="cursor: pointer">
+                    <td>
+                        <i class="pi pi-circle" style="font-size: 1.5rem"></i>
+                    </td>
+                    <td>{{ todo.title }}</td>
+                    <td>{{ todo.description }}</td>
+                    <td>
+                        <!-- {{todo.status}} -->
+                        <div class="inline-block">
+                            <span>
+                                <strong>{{ todo.status }}</strong>
+                            </span>
+                            <div class="my-2">
+                                <p-button
+                                    severity="secondary"
+                                    *ngFor="let type of typeTodoStatus"
+                                    (click)="changeStatus(type, todo.id)"
+                                >
+                                    {{ type }}
+                                </p-button>
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
 </div>
