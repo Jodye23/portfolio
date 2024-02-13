@@ -6,6 +6,7 @@ import { PrimeNgModulesModule } from 'src/app/shared/prime-ng-modules/prime-ng-m
 import { LoginComponent } from './login/login.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormTaskModalComponent } from './todo-list/form-task-modal/form-task-modal.component';
+import { DialogService } from 'primeng/dynamicdialog';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormTaskModalComponent } from './todo-list/form-task-modal/form-task-mo
   imports: [
     CommonModule,
     TodoRoutingModule, PrimeNgModulesModule
-  ]
+  ],
+  providers: [DialogService]
 })
 export class TodoModule { }

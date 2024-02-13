@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Todo } from '../../models/todo.model';
 import { TodoService } from '../../services/todo.service';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-form-task-modal',
@@ -13,7 +14,8 @@ export class FormTaskModalComponent {
     title: ['', [Validators.required]],
     description: [''],
   });
-  constructor(private readonly formBuilder: FormBuilder, private readonly todoService: TodoService) {
+  ref: DynamicDialogRef | undefined;
+  constructor(private readonly formBuilder: FormBuilder, private readonly todoService: TodoService, public dialogService: DialogService) {
 
   }
 
@@ -27,8 +29,5 @@ export class FormTaskModalComponent {
     // this.ngbActiveModal.close();
   }
 
-  closeTodoModal() {
-    // this.ngbActiveModal.close();
 
-  }
 }
