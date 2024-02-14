@@ -33,11 +33,12 @@
         </div>
     </div>
 
-    <div class="mt-4">
+    <div class="mt-2 flex align-item-center justify-content-center">
         <p-carousel
+            style="width: 40rem"
             [value]="exampleMovies"
-            numVisible="3"
-            numScroll="3"
+            numVisible="1"
+            numScroll="1"
             [circular]="true"
             [autoplayInterval]="3000"
         >
@@ -50,7 +51,7 @@
                     <img
                         [src]="movie.image"
                         alt="Movie Image"
-                        style="width: 400px; height: 550px"
+                        style="width: 50%"
                     />
                     <p-footer>
                         <p>{{ movie.description }}</p>
@@ -67,7 +68,7 @@
         <div class="flex align-items-center justify-content-center">
             <div>
                 <img
-                    style="max-width: 400px"
+                    style="max-width: 350px"
                     [src]="selectedMovie.image"
                     alt="{{ selectedMovie.title }}"
                 />

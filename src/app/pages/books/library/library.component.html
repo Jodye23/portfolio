@@ -80,12 +80,14 @@
             label="Aggiungi libro"
         ></p-button>
     </div>
-    <div class="grid ml-8 mt-5">
+    <div
+        class="flex gap-6 flex-wrap align-items-center justify-content-center mt-3"
+    >
         <div
             *ngFor="let book of books; let i = index"
-            class="col-6 zoominup animation-duration-1000"
+            class="zoominup animation-duration-1000"
         >
-            <p-card [style]="{ width: '600px' }">
+            <p-card [style]="{ width: '30rem' }">
                 <div class="flex">
                     <div>
                         <img
@@ -123,7 +125,7 @@
             </p-card>
         </div>
     </div>
-    <div class="text-center">
+    <div class="text-center mt-3">
         <p-button
             label="Torna alla libreria"
             [rounded]="true"

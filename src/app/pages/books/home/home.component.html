@@ -1,11 +1,12 @@
 <div class="card">
     <div class="text-6xl text-primary font-bold mb-3 text-center">LIBRERIA</div>
-    <div class="grid ml-8">
+
+    <div class="flex gap-6 flex-wrap align-items-center justify-content-center">
         <div
             *ngFor="let book of books"
-            class="col-6 zoominup animation-duration-1000"
+            class="zoominup animation-duration-1000"
         >
-            <p-card [style]="{ width: '600px' }">
+            <p-card [style]="{ width: '30rem' }">
                 <div class="flex">
                     <div>
                         <img
@@ -30,7 +31,7 @@
         </div>
     </div>
 
-    <div class="text-center">
+    <div class="text-center mt-3">
         <p-button
             label="Dona un libro"
             [rounded]="true"
