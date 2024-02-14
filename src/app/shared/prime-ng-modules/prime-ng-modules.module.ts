@@ -21,8 +21,9 @@ import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { CheckboxModule } from 'primeng/checkbox';
 import { AutoFocusModule } from 'primeng/autofocus';
+import { DividerModule } from 'primeng/divider';
 
-const PrimeNgModules = [HttpClientModule, FormsModule, ReactiveFormsModule, CardModule, ButtonModule, TabMenuModule, InputGroupModule, InputGroupAddonModule, InputTextModule, TableModule, ListboxModule, CarouselModule, AutoCompleteModule, ToastModule, TooltipModule, RatingModule, DataViewModule, DialogModule, DynamicDialogModule, ScrollTopModule, CheckboxModule, AutoFocusModule];
+const PrimeNgModules = [HttpClientModule, FormsModule, ReactiveFormsModule, CardModule, ButtonModule, TabMenuModule, InputGroupModule, InputGroupAddonModule, InputTextModule, TableModule, ListboxModule, CarouselModule, AutoCompleteModule, ToastModule, TooltipModule, RatingModule, DataViewModule, DialogModule, DynamicDialogModule, ScrollTopModule, CheckboxModule, AutoFocusModule, DividerModule];
 
 @NgModule({
   declarations: [],
