@@ -11,7 +11,7 @@
                     [suggestions]="searchResults"
                     (completeMethod)="searchMovies()"
                     pTooltip="Il film che selezionerai apparirà in fondo alla pagina"
-                    tooltipPosition="bottom"
+                    tooltipPosition="left"
                     pAutoFocus
                     [autofocus]="true"
                 >
@@ -33,32 +33,27 @@
         </div>
     </div>
 
-    <div class="mt-2 flex align-item-center justify-content-center">
-        <p-carousel
-            [value]="exampleMovies"
-            numVisible="1"
-            numScroll="1"
-            [circular]="true"
-            [autoplayInterval]="3000"
-        >
-            <ng-template let-movie pTemplate="item">
-                <p-card
-                    [header]="movie.title"
-                    [subheader]="movie.year"
-                    class="text-center"
-                >
-                    <img
-                        [src]="movie.image"
-                        alt="Movie Image"
-                        style="width: 230px"
-                    />
-                    <p-footer>
-                        <p>{{ movie.description }}</p>
-                    </p-footer>
-                </p-card>
-            </ng-template>
-        </p-carousel>
-    </div>
+    <p-carousel
+        [value]="exampleMovies"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        autoplayInterval="3000"
+    >
+        <ng-template let-movie pTemplate="item">
+            <div
+                class="border-1 surface-border border-round m-2 text-center py-5 px-3"
+            >
+                <div class="mb-3">
+                    <img [src]="movie.image" class="w-3 shadow-4" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ movie.title }}</h4>
+                    <h6 class="mt-0 mb-3">{{ movie.year }}</h6>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
 
     <div
         *ngIf="selectedMovie"
