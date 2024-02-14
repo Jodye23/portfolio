@@ -35,7 +35,6 @@
 
     <div class="mt-2 flex align-item-center justify-content-center">
         <p-carousel
-            style="width: 40rem"
             [value]="exampleMovies"
             numVisible="1"
             numScroll="1"
@@ -51,7 +50,7 @@
                     <img
                         [src]="movie.image"
                         alt="Movie Image"
-                        style="width: 50%"
+                        style="width: 230px"
                     />
                     <p-footer>
                         <p>{{ movie.description }}</p>
@@ -65,10 +64,10 @@
         *ngIf="selectedMovie"
         class="card mt-2 shadow-6 zoomindown animation-duration-1000"
     >
-        <div class="flex align-items-center justify-content-center">
+        <div class="flex flex-wrap align-items-center justify-content-center">
             <div>
                 <img
-                    style="max-width: 350px"
+                    style="max-width: 250px"
                     [src]="selectedMovie.image"
                     alt="{{ selectedMovie.title }}"
                 />
