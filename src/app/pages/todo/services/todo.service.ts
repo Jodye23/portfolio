@@ -10,7 +10,7 @@ export class TodoService {
     new Todo({
       id: 999,
       title: 'Test',
-      description: "description test",
+      description: "Description test",
       status: STATUS_TODO.TO_BE_DONE
     })
   ];

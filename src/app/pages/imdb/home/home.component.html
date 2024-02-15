@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="text-6xl text-primary font-bold mb-3 text-center">IMDB</div>
+    <div class="text-6xl text-primary font-bold mb-3 text-center">Imdb</div>
 
     <div class="flex align-item-center justify-content-center">
         <div style="width: 50rem">
@@ -48,7 +48,7 @@
                     <img [src]="movie.image" class="w-3 shadow-4" />
                 </div>
                 <div>
-                    <h4 class="mb-1">{{ movie.title }}</h4>
+                    <h4 class="mb-1 text-primary">{{ movie.title }}</h4>
                     <h6 class="mt-0 mb-3">{{ movie.year }}</h6>
                 </div>
             </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="pl-5">
                 <div>
-                    <h2>{{ selectedMovie.title }}</h2>
+                    <h2 class="text-primary">{{ selectedMovie.title }}</h2>
                     <p>
                         <small
                             ><strong>Year:</strong>

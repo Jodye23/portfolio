@@ -1,8 +1,16 @@
 <div class="card">
     <div class="text-6xl text-primary font-bold mb-3 text-center">TASK</div>
-    <p-button (click)="logoutUser()" severity="danger">Logout</p-button>
+    <p-button
+        (click)="logoutUser()"
+        severity="danger"
+        label="Logout"
+    ></p-button>
     <div class="my-3 text-center">
-        <button pButton (click)="openFormTaskModal()">Aggiungi Task</button>
+        <button
+            pButton
+            (click)="openFormTaskModal()"
+            label="Aggiungi Task"
+        ></button>
     </div>
 
     <div class="my-5">
@@ -44,8 +52,8 @@
                                     *ngFor="let type of typeTodoStatus"
                                     severity="success"
                                     (click)="changeStatus(type, todo.id)"
+                                    label="{{ type }}"
                                 >
-                                    {{ type }}
                                 </p-button>
                             </div>
                         </div>
@@ -91,8 +99,8 @@
                                     severity="secondary"
                                     *ngFor="let type of typeTodoStatus"
                                     (click)="changeStatus(type, todo.id)"
+                                    label="{{ type }}"
                                 >
-                                    {{ type }}
                                 </p-button>
                             </div>
                         </div>

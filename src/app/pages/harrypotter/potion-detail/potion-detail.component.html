@@ -1,12 +1,17 @@
 <div *ngIf="!isLoading">
     <div class="card">
         <div class="flex">
-            <p-button routerLink="/harry">Back to Wizard List</p-button>
-            <p-button styleClass="p-button-secondary" (click)="backtoWizard()"
-                >Back to Wizard Detail</p-button
-            >
+            <p-button
+                routerLink="/harry"
+                label="Back to Wizard List"
+            ></p-button>
+            <p-button
+                styleClass="p-button-secondary"
+                (click)="backtoWizard()"
+                label="Back to Wizard Detail"
+            ></p-button>
         </div>
-        <h1>Elixir Detail</h1>
+        <h1 class="text-primary">Elixir Detail</h1>
         <h4 class="my-4">{{ elixir.name }}</h4>
         <p *ngIf="elixir.effect">
             <strong>Effects: </strong>{{ elixir.effect }}
@@ -30,6 +35,7 @@
                 <p-table
                     [value]="elixir.ingredients"
                     [tableStyle]="{ 'min-width': '60rem' }"
+                    styleClass="p-datatable-gridlines border-1 surface-border border-round"
                 >
                     <ng-template pTemplate="caption">
                         <div
@@ -62,6 +68,7 @@
                 <p-table
                     [value]="elixir.inventors"
                     [tableStyle]="{ 'min-width': '60rem' }"
+                    styleClass="p-datatable-gridlines border-1 surface-border border-round"
                 >
                     <ng-template pTemplate="caption">
                         <div

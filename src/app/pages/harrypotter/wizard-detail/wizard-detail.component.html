@@ -1,10 +1,12 @@
 <div *ngIf="!isLoading" class="card">
     <div>
-        <p-button routerLink="/harry">Back to Wizard List</p-button>
+        <p-button routerLink="/harry" label="Back to Wizard List"></p-button>
     </div>
     <div class="text-center">
         <div>
-            <h1 class="mb-4">{{ wizard.name }} {{ wizard.surname }}</h1>
+            <h1 class="mb-4 text-primary">
+                {{ wizard.name }} {{ wizard.surname }}
+            </h1>
 
             <h3>Potion List</h3>
         </div>
@@ -24,7 +26,10 @@
             />
             <div class="card-body">
                 <h5 class="card-title">{{ elixir.name }}</h5>
-                <p-button (click)="elixirDetail(elixir.id)">Detail</p-button>
+                <p-button
+                    (click)="elixirDetail(elixir.id)"
+                    label="Detail"
+                ></p-button>
             </div>
         </div>
     </div>

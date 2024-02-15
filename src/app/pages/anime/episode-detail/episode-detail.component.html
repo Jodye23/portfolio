@@ -9,6 +9,7 @@
             label="Back to Home"
             [rounded]="true"
             (click)="backtoHome()"
+            severity="secondary"
         ></p-button>
     </div>
 
@@ -39,7 +40,8 @@
         </ng-template>
     </p-table>
 
-    <div header="Synopsis" class="text-center" class="card shadow-6">
+    <div class="text-center" class="card shadow-6">
+        <h3 class="text-primary text-center">Synopsis</h3>
         <p class="m-0">
             {{ episode.synopsis }}
         </p>
