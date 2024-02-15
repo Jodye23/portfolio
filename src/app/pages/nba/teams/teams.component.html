@@ -1,7 +1,11 @@
 <div class="card">
     <app-navbar></app-navbar>
     <div class="pt-2">
-        <p-table [value]="teams" [tableStyle]="{ 'min-width': '50rem' }">
+        <p-table
+            [value]="teams"
+            [tableStyle]="{ 'min-width': '50rem' }"
+            styleClass="p-datatable-gridlines border-1 surface-border border-round"
+        >
             <ng-template pTemplate="caption">
                 <div class="flex">
                     <button

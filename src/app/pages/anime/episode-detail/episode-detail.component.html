@@ -12,7 +12,11 @@
         ></p-button>
     </div>
 
-    <p-table [tableStyle]="{ 'min-width': '60rem' }" [value]="[episode]">
+    <p-table
+        [tableStyle]="{ 'min-width': '60rem' }"
+        [value]="[episode]"
+        styleClass="p-datatable-gridlines border-1 surface-border border-round"
+    >
         <ng-template pTemplate="header">
             <tr>
                 <th>N.</th>
@@ -35,11 +39,11 @@
         </ng-template>
     </p-table>
 
-    <p-card header="Synopsis" class="text-center">
+    <div header="Synopsis" class="text-center" class="card shadow-6">
         <p class="m-0">
             {{ episode.synopsis }}
         </p>
-    </p-card>
+    </div>
     <div class="flex align-items-center justify-content-center mt-8">
         <div>
             <img

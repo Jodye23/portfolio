@@ -37,7 +37,11 @@
 
     <div>
         <h3 class="mt-5">Statistics</h3>
-        <p-table [tableStyle]="{ 'min-width': '60rem' }" [value]="[statistics]">
+        <p-table
+            [tableStyle]="{ 'min-width': '60rem' }"
+            [value]="[statistics]"
+            styleClass="p-datatable-gridlines border-1 surface-border border-round"
+        >
             <ng-template pTemplate="header">
                 <tr>
                     <th>Watching</th>
@@ -70,6 +74,7 @@
             [paginator]="true"
             [rows]="20"
             [rowsPerPageOptions]="[20, 40, 80]"
+            styleClass="p-datatable-gridlines border-1 surface-border border-round"
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
