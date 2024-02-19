@@ -22,4 +22,45 @@
     >
         <i class="pi pi-ellipsis-v"></i>
     </button>
+    <div
+        #topbarmenu
+        class="layout-topbar-menu"
+        [ngClass]="{
+            'layout-topbar-menu-mobile-active':
+                layoutService.state.profileSidebarVisible
+        }"
+    >
+        <button
+            class="p-link h-3rem w-2rem"
+            (click)="changeTheme('lara-dark-indigo', 'dark')"
+            [ngClass]="{ active: colorScheme === 'dark' }"
+        >
+            <i class="pi pi-moon"></i>
+        </button>
+
+        <button
+            class="p-link h-3rem w-2rem"
+            (click)="changeTheme('lara-light-indigo', 'light')"
+            [ngClass]="{ active: colorScheme === 'light' }"
+        >
+            <i class="pi pi-sun"></i>
+        </button>
+        <div>
+            <p-dropdown
+                [options]="languages"
+                optionLabel="label"
+                [showClear]="false"
+                (onChange)="changeLanguage($event)"
+            >
+                <ng-template let-item pTemplate="selectedItem">
+                    <img
+                        [src]="item?.flag"
+                        alt=""
+                        style="width: 10px; height: 10px"
+                    />
+                    {{ item?.label }}
+                </ng-template>
+            </p-dropdown>
+        </div>
+    </div>
 </div>

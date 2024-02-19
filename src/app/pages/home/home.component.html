@@ -17,14 +17,7 @@
                 <p
                     class="mt-0 mb-4 text-700 line-height-3 fadein animation-duration-1000"
                 >
-                    Ciao a tutti sono MVT, un giovane appassionato di coding e
-                    da poco ho abbracciato il ruolo di Front-end Web Developer
-                    specializzato in Angular grazie al corso della 24ORE
-                    Business School. <br />
-                    Nel mio portfolio potrete scoprire i progetti su cui ho
-                    lavorato. Non vedo l'ora di condividere con voi la mia
-                    passione per il mondo dello sviluppo web. Grazie per essere
-                    qui e buona esplorazione!
+                    {{ "ABOUTME" | translate }}
                 </p>
 
                 <button
@@ -77,10 +70,14 @@
                 <p-dialog
                     header="CV"
                     [(visible)]="visibleCv"
-                    [style]="{ width: '43rem' }"
+                    [style]="{ width: '60rem' }"
                 >
                     <div class="flex align-item-center justify-content-center">
-                        <img style="width: 100%" src="assets/cv.png" alt="" />
+                        <pdf-viewer
+                            style="width: 100%; height: 60vh"
+                            [src]="cvSource"
+                            alt=""
+                        />
                     </div>
                 </p-dialog>
                 <br />
@@ -108,12 +105,13 @@
                 </p-dialog>
             </section>
         </div>
-        <div class="col-12 md:col-6 overflow-hidden border-round">
+        <div
+            class="col-12 md:col-6 overflow-hidden border-round fadeinright animation-duration-1000"
+        >
             <img
                 src="https://c4.wallpaperflare.com/wallpaper/846/863/628/abstract-cube-3d-wallpaper-preview.jpg"
                 alt="Image"
-                class="md:ml-auto block md:h-full fadeinright animation-duration-1000"
-                style="clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"
+                class="md:ml-auto block md:h-full shadow-6"
             />
         </div>
     </div>

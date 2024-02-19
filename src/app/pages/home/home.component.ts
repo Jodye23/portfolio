@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ export class HomeComponent {
   visibleCv: boolean = false;
   visibleFigma: boolean = false;
   email = 'torrieromarcovalerio@gmail.com';
+  cvSource: string = "../../assets/CV.pdf";
+  title: string = 'cvPdf';
 
   showInfo() {
     this.visibleInfo = true;
@@ -21,5 +24,10 @@ export class HomeComponent {
 
   showFigma() {
     this.visibleFigma = true;
+  }
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
   }
 }
