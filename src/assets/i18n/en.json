@@ -1,3 +1,11 @@
 {
-    "ABOUTME": "Hello everyone, I'm MVT, a young coding enthusiast, and I recently embraced the role of Front-end Web Developer specializing in Angular thanks to the 24ORE Business School course. In my portfolio, you can discover the projects I've worked on. I can't wait to share my passion for the world of web development with you. Thank you for being here, and happy exploration!"
+    "ABOUTME": "Hello everyone, I'm MVT, a young coding enthusiast, and I recently embraced the role of Front-end Web Developer specializing in Angular thanks to the 24ORE Business School course. In my portfolio, you can discover the projects I've worked on. I can't wait to share my passion for the world of web development with you. Thank you for being here, and happy exploration!",
+    "SKILL": "Main",
+    "MAIN": "skills",
+    "ANGULAR": "JavaScript framework for developing dynamic and interactive web applications",
+    "GITHUB": "Distributed version control management for collaborating and tracking changes in the source code",
+    "UX/UI": "Design and development of user experience and user interface to create intuitive and appealing designs",
+    "WEBDEV": "Development of websites and applications using various approaches to ensure an efficient user experience",
+    "CSS": "Styling language used to define the appearance and formatting of elements on web pages",
+    "LIBRARIES": "Use of libraries to accelerate web development and enhance the appearance and functionality of applications"
 }

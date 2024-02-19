@@ -1,4 +1,4 @@
-<div class="card p-0 m-0">
+<div class="card p-0 m-0 overflow-hidden">
     <div class="grid grid-nogutter text-800">
         <div
             class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
@@ -15,7 +15,7 @@
                     Front-End Web Developer
                 </div>
                 <p
-                    class="mt-0 mb-4 text-700 line-height-3 fadein animation-duration-1000"
+                    class="mt-0 mb-4 text-700 line-height-3 fadein animation-duration-1000 text-justify"
                 >
                     {{ "ABOUTME" | translate }}
                 </p>
@@ -23,9 +23,9 @@
                 <button
                     pButton
                     pRipple
-                    label="Contatti"
+                    label="Info"
                     type="button"
-                    class="mr-3 p-button-raised fadeindown animation-duration-1000"
+                    class="mr-3 ml-1 p-button-raised fadeindown animation-duration-1000"
                     (click)="showInfo()"
                 ></button>
                 <p-dialog
@@ -84,9 +84,9 @@
                 <button
                     pButton
                     pRipple
-                    label="Progetto Figma"
+                    label="Figma App"
                     type="button"
-                    class="mt-3 p-button-raised p-button-text fadeindown animation-duration-1000"
+                    class="mt-3 ml-2 mb-2 p-button-raised p-button-text fadeindown animation-duration-1000"
                     (click)="showFigma()"
                 ></button>
                 <p-dialog
@@ -117,10 +117,10 @@
     </div>
     <div class="px-4 py-6 md:px-6 lg:px-8 text-center">
         <div class="mb-5 font-bold text-3xl fadein animation-duration-1000">
-            <span class="text-900">Skill </span>
-            <span class="text-primary-600">principali</span>
+            <span class="text-900">{{ "SKILL" | translate }} </span>
+            <span class="text-primary-600">{{ "MAIN" | translate }}</span>
         </div>
-        <div class="grid zoomin animation-duration-1000">
+        <div class="grid fadein animation-duration-1000">
             <div class="col-12 md:col-4 mb-4 px-5">
                 <span
                     class="p-3 shadow-2 mb-3 inline-block surface-card"
@@ -129,10 +129,9 @@
                     <i class="pi pi-shield text-4xl text-primary-500"></i>
                 </span>
                 <div class="text-900 text-xl mb-3 font-medium">Angular</div>
-                <span class="text-700 line-height-3"
-                    >Framework JavaScript per lo sviluppo di applicazioni web
-                    dinamiche e interattive</span
-                >
+                <span class="text-700 line-height-3">{{
+                    "ANGULAR" | translate
+                }}</span>
             </div>
             <div class="col-12 md:col-4 mb-4 px-5">
                 <span
@@ -142,10 +141,9 @@
                     <i class="pi pi-github text-4xl text-primary-500"></i>
                 </span>
                 <div class="text-900 text-xl mb-3 font-medium">Git-Hub</div>
-                <span class="text-700 line-height-3"
-                    >Gestione del controllo versione distribuito per collaborare
-                    e tracciare le modifiche nel codice sorgente</span
-                >
+                <span class="text-700 line-height-3">{{
+                    "GITHUB" | translate
+                }}</span>
             </div>
             <div class="col-12 md:col-4 mb-4 px-5">
                 <span
@@ -157,11 +155,9 @@
                 <div class="text-900 text-xl mb-3 font-medium">
                     UX/UI Design
                 </div>
-                <span class="text-700 line-height-3"
-                    >Progettazione e sviluppo dell'esperienza utente e
-                    dell'interfaccia utente per creare design intuitivi e
-                    accattivanti</span
-                >
+                <span class="text-700 line-height-3">{{
+                    "UX/UI" | translate
+                }}</span>
             </div>
             <div class="col-12 md:col-4 mb-4 px-5">
                 <span
@@ -173,10 +169,9 @@
                 <div class="text-900 text-xl mb-3 font-medium">
                     Web Development
                 </div>
-                <span class="text-700 line-height-3"
-                    >Sviluppo di siti web e applicazioni utilizzando vari
-                    approcci per garantire un'esperienza utente efficiente</span
-                >
+                <span class="text-700 line-height-3">{{
+                    "WEBDEV" | translate
+                }}</span>
             </div>
             <div class="col-12 md:col-4 mb-4 px-5">
                 <span
@@ -187,8 +182,7 @@
                 </span>
                 <div class="text-900 text-xl mb-3 font-medium">CSS</div>
                 <span class="text-700 line-height-3"
-                    >Linguaggio di stile utilizzato per definire l'aspetto e la
-                    formattazione degli elementi su pagine web
+                    >{{ "CSS" | translate }}
                 </span>
             </div>
             <div class="col-12 md:col-4 md:mb-4 mb-0 px-3">
@@ -201,11 +195,9 @@
                 <div class="text-900 text-xl mb-3 font-medium">
                     Boostrap, PrimeNg ed altre librerie...
                 </div>
-                <span class="text-700 line-height-3"
-                    >Utilizzo di librerie come Bootstrap e PrimeNg per
-                    accelerare lo sviluppo web e migliorare l'aspetto e le
-                    funzionalità delle applicazioni</span
-                >
+                <span class="text-700 line-height-3">{{
+                    "LIBRARIES" | translate
+                }}</span>
             </div>
         </div>
     </div>
