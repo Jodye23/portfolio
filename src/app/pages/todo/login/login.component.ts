@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/guards/auth.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,9 @@ import { AuthService } from '../services/guards/auth.service';
 export class LoginComponent {
   user = this.authService.getUser();
 
-  constructor(private authService: AuthService, private router: Router) {
-
+  constructor(private translate: TranslateService, private authService: AuthService, private router: Router) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
   }
 
   save(formValue: any) {

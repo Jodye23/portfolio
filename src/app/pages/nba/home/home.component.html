@@ -10,11 +10,9 @@
             <div class="ml-5">
                 <div class="text-6xl text-primary font-bold mb-3">NBA APP</div>
                 <p>
-                    Benvenuti, per tutti gli appassionati di palla canestro !
+                    {{ "SUBHEADERNBA" | translate }}
                     <br />
-                    Qui potrete trovare tutte le informazioni riguardanti la
-                    vostra squadra preferita, i giocatori, le partite e tanto
-                    ancora
+                    {{ "P-NBA" | translate }}
                 </p>
             </div>
         </div>
@@ -61,7 +59,7 @@
             <p-card
                 class="flex m-5 text-center shadow-6 zoomindown animation-duration-1000"
                 header="STATS"
-                subheader="Sei amante dei dati? Controlla le statistiche sempre aggiornate"
+                subheader="Are you a data lover? Check the always updated statistics"
                 [style]="{ width: '15rem', color: 'blue' }"
             >
                 <ng-template pTemplate="header">
@@ -86,7 +84,7 @@
             <p-card
                 class="flex m-5 text-center shadow-6 zoomindown animation-duration-1000"
                 header="LIVE"
-                subheader="Segui la lega più bella del mondo sempre live"
+                subheader="Follow the most beautiful league in the world always live"
                 [style]="{ width: '15rem', color: 'red' }"
             >
                 <ng-template pTemplate="header">
@@ -112,7 +110,7 @@
             <p-card
                 class="flex m-5 text-center shadow-6 zoomindown animation-duration-1000"
                 header="GAMES"
-                subheader="Controlla come sono andate le partite e vedi il calendario di gioco"
+                subheader="Check how the matches went and see the game schedule"
                 [style]="{ width: '15rem', color: 'green' }"
             >
                 <ng-template pTemplate="header">
@@ -140,7 +138,7 @@
             <p-card
                 class="flex m-5 text-center shadow-6 zoomindown animation-duration-1000"
                 header="STANDINGS"
-                subheader="La classifica delle due Conference della lega aggiornata"
+                subheader="The updated standings of the two Conferences of the league"
                 [style]="{ width: '15rem', color: 'orange' }"
             >
                 <ng-template pTemplate="header">

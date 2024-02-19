@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -25,10 +26,10 @@ export class HomeComponent {
     { title: 'Il Cavaliere Oscuro', year: '2008', image: 'https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg' }
   ];
 
-
-
-  constructor(private apiService: ApiService) { }
-
+  constructor(private translate: TranslateService, private apiService: ApiService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
+  }
 
 
   searchMovies(): void {

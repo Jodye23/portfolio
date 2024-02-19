@@ -5,6 +5,7 @@ import { TodoService } from '../services/todo.service';
 import { FormTaskModalComponent } from './form-task-modal/form-task-modal.component';
 import { AuthService } from '../services/guards/auth.service';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-todo-list',
@@ -20,15 +21,15 @@ export class TodoListComponent {
   todoList$: Observable<any> = new Observable<any>();
   ref: DynamicDialogRef | undefined;
 
-  constructor(private readonly todoService: TodoService, private authService: AuthService, public dialogService: DialogService) {
-
+  constructor(private translate: TranslateService, private authService: AuthService, private readonly todoService: TodoService, public dialogService: DialogService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
     this.todoList$ = this.todoService.getTodoList();
-
   }
 
 
   openFormTaskModal() {
-    this.ref = this.dialogService.open(FormTaskModalComponent, { header: 'Aggiungi un nuovo task' });
+    this.ref = this.dialogService.open(FormTaskModalComponent, { header: 'New task' });
   }
 
   changeStatus(type: STATUS_TODO, id: number) {

@@ -2,7 +2,7 @@
     <div class="card p-4 shadow-6 border-round w-full lg:w-6">
         <div class="text-center mb-5">
             <div class="text-900 text-3xl text-primary font-bold mb-3">
-                Login
+                {{ "TITLELOGIN-TODO" | translate }}
             </div>
         </div>
 
@@ -16,7 +16,7 @@
                     #username="ngModel"
                     [(ngModel)]="user.username"
                     name="username"
-                    placeholder="Scrivi username..."
+                    placeholder="Write your username..."
                     pInputText
                     class="w-full mb-3"
                     required
@@ -32,7 +32,7 @@
                     #password="ngModel"
                     [(ngModel)]="user.password"
                     name="password"
-                    placeholder="Scrivi password..."
+                    placeholder="Write your password..."
                     pInputText
                     class="w-full mb-3"
                     required
@@ -42,7 +42,7 @@
             <button
                 pButton
                 pRipple
-                label="Accedi"
+                label="Login"
                 icon="pi pi-user"
                 class="w-full"
                 [disabled]="form.invalid"

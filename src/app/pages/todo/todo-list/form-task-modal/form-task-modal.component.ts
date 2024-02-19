@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Todo } from '../../models/todo.model';
 import { TodoService } from '../../services/todo.service';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-form-task-modal',
@@ -15,8 +16,10 @@ export class FormTaskModalComponent {
     description: [''],
   });
   ref: DynamicDialogRef | undefined;
-  constructor(private readonly formBuilder: FormBuilder, private readonly todoService: TodoService, public dialogService: DialogService) {
 
+  constructor(private translate: TranslateService, private readonly formBuilder: FormBuilder, private readonly todoService: TodoService, public dialogService: DialogService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
   }
 
   addTodo() {

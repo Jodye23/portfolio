@@ -1,5 +1,7 @@
 <div *ngIf="!isLoading" class="card">
-    <div class="text-6xl text-primary font-bold mb-3 text-center">Maghi</div>
+    <div class="text-6xl text-primary font-bold mb-3 text-center">
+        {{ "TITLE-WIZARD" | translate }}
+    </div>
 
     <div
         class="flex gap-3 flex-wrap align-item-center justify-content-center overflow-hidden"
@@ -21,7 +23,7 @@
                 </h5>
                 <p-button
                     (click)="wizardDetail(wizard.id)"
-                    label="Dettagli"
+                    label="Details"
                 ></p-button>
             </div>
         </div>

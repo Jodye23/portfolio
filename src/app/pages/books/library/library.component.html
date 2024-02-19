@@ -8,13 +8,17 @@
         <div
             class="inline-flex align-items-center justify-content-center gap-2"
         >
-            <span class="font-bold white-space-nowrap">Aggiungi libro</span>
+            <span class="font-bold white-space-nowrap">{{
+                "TITLEMODAL-LIBRARYADD" | translate
+            }}</span>
         </div>
     </ng-template>
     <div class="formgrid grid justify-content-center">
         <form [formGroup]="newBookForm">
             <div class="field col">
-                <label for="title">Titolo</label>
+                <label for="title">{{
+                    "TITLEMODAL-LIBRARYTITLE" | translate
+                }}</label>
                 <input
                     pInputText
                     id="title"
@@ -23,7 +27,9 @@
                 />
             </div>
             <div class="field col">
-                <label for="author">Autore</label>
+                <label for="author">{{
+                    "TITLEMODAL-LIBRARYAUTHOR" | translate
+                }}</label>
                 <input
                     pInputText
                     id="author"
@@ -32,7 +38,9 @@
                 />
             </div>
             <div class="field col">
-                <label for="publicationYear">Anno di pubblicazione</label>
+                <label for="publicationYear">{{
+                    "TITLEMODAL-LIBRARYEAR" | translate
+                }}</label>
                 <input
                     pInputText
                     id="publicationYear"
@@ -41,7 +49,7 @@
                 />
             </div>
             <div class="field col">
-                <label for="synopsis">Sinossi</label>
+                <label for="synopsis">{{ "SYNOPSIS" | translate }}</label>
                 <input
                     pInputText
                     id="synopsis"
@@ -50,7 +58,7 @@
                 />
             </div>
             <div class="field col">
-                <label for="imageUrl">Url copertina</label>
+                <label for="imageUrl">Url cover</label>
                 <input
                     pInputText
                     id="imageUrl"
@@ -77,7 +85,7 @@
         <p-button
             (click)="openNewBookModal()"
             icon="pi pi-book"
-            label="Aggiungi libro"
+            label="Add book"
         ></p-button>
     </div>
     <div
@@ -102,7 +110,7 @@
                             <strong>{{ book.author }}</strong
                             ><small>({{ book.publicationYear }})</small>
                         </p>
-                        <p><strong>Trama:</strong></p>
+                        <p><strong>Plot:</strong></p>
                         <p>
                             {{ book.synopsis }}
                         </p>
@@ -110,12 +118,12 @@
                 </div>
                 <div class="text-center pt-5">
                     <p-button
-                        label="Modifica"
+                        label="Edit"
                         icon="pi pi-pencil"
                         (click)="openEditModal(i)"
                     ></p-button>
                     <p-button
-                        label="Rimuovi"
+                        label="Remove"
                         icon="pi pi-times"
                         styleClass="p-button-secondary"
                         [style]="{ 'margin-left': '.5em' }"
@@ -127,7 +135,7 @@
     </div>
     <div class="text-center mt-3">
         <p-button
-            label="Torna alla libreria"
+            label="Back to Library"
             [rounded]="true"
             (click)="backToHome()"
         ></p-button>
@@ -144,13 +152,17 @@
         <div
             class="inline-flex align-items-center justify-content-center gap-2"
         >
-            <span class="font-bold white-space-nowrap">Modifica libro</span>
+            <span class="font-bold white-space-nowrap">{{
+                "TITLEMODAL-LIBRARYEDIT" | translate
+            }}</span>
         </div>
     </ng-template>
     <div class="formgrid grid justify-content-center">
         <form [formGroup]="bookForm">
             <div class="field col">
-                <label for="title">Titolo</label>
+                <label for="title">{{
+                    "TITLEMODAL-LIBRARYTITLE" | translate
+                }}</label>
                 <input
                     pInputText
                     id="title"
@@ -159,7 +171,9 @@
                 />
             </div>
             <div class="field col">
-                <label for="author">Autore</label>
+                <label for="author">{{
+                    "TITLEMODAL-LIBRARYAUTHOR" | translate
+                }}</label>
                 <input
                     pInputText
                     id="author"
@@ -168,7 +182,9 @@
                 />
             </div>
             <div class="field col">
-                <label for="publicationYear">Anno di pubblicazione</label>
+                <label for="publicationYear">{{
+                    "TITLEMODAL-LIBRARYEAR" | translate
+                }}</label>
                 <input
                     pInputText
                     id="publicationYear"
@@ -177,7 +193,7 @@
                 />
             </div>
             <div class="field col">
-                <label for="synopsis">Sinossi</label>
+                <label for="synopsis">{{ "SYNOPSIS" | translate }}</label>
                 <input
                     pInputText
                     id="synopsis"
@@ -186,7 +202,7 @@
                 />
             </div>
             <div class="field col">
-                <label for="imageUrl">Url copertina</label>
+                <label for="imageUrl">Url cover</label>
                 <input
                     pInputText
                     id="imageUrl"
@@ -201,7 +217,7 @@
         <p-button
             icon="pi pi-check"
             (click)="saveBook()"
-            label="Salva"
+            label="Save"
             pAutoFocus
             [autofocus]="true"
         ></p-button>

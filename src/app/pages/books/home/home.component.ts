@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { IBook } from '../models/book.model';
 import { BookService } from '../services/book.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,10 @@ export class HomeComponent {
   private destroy$ = new Subject<void>();
   books: IBook[] = [];
 
-  constructor(public router: Router, private bookService: BookService) { }
+  constructor(private translate: TranslateService, public router: Router, private bookService: BookService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
+  }
 
   ngOnInit(): void {
     this.bookService.books$

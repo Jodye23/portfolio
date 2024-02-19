@@ -5,6 +5,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { IBook, BookModel } from '../models/book.model';
 import { BookService } from '../services/book.service';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-library',
@@ -20,7 +21,9 @@ export class LibraryComponent {
   visible: boolean = false;
   editVisible: boolean = false;
 
-  constructor(private bookService: BookService, private fb: FormBuilder, private router: Router) {
+  constructor(private translate: TranslateService, private bookService: BookService, private fb: FormBuilder, private router: Router) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
     this.bookForm = this.fb.group({
       title: [''],
       author: [''],

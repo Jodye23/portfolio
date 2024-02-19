@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NbaService } from '../services/nba.service';
 import { Team } from '../models/team.model';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teams',
@@ -12,7 +13,10 @@ export class TeamsComponent implements OnInit {
   filterTerm: string = '';
   favorites: string[] = [];
 
-  constructor(private nbaService: NbaService) { }
+  constructor(private nbaService: NbaService, private translate: TranslateService) {
+    this.translate.addLangs(['it', 'en']);
+    this.translate.setDefaultLang('it');
+  }
 
   ngOnInit(): void {
     this.getTeams();

@@ -1,7 +1,7 @@
 export enum STATUS_TODO {
-  DONE = "Fatto",
-  TO_BE_DONE = "Da fare",
-  RESCHEDULE = "Rimandato",
+  DONE = "Done",
+  TO_BE_DONE = "To do",
+  RESCHEDULE = "Postponed",
 }
 
 export interface ITodo {

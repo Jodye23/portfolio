@@ -6,11 +6,7 @@
         label="Logout"
     ></p-button>
     <div class="my-3 text-center">
-        <button
-            pButton
-            (click)="openFormTaskModal()"
-            label="Aggiungi Task"
-        ></button>
+        <button pButton (click)="openFormTaskModal()" label="Add Task"></button>
     </div>
 
     <div class="my-5">
@@ -20,15 +16,15 @@
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
-                    Completate
+                    {{ "TABLECOMPLETE" | translate }}
                 </div>
             </ng-template>
             <ng-template pTemplate="header">
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Status</th>
+                    <th>{{ "TABLETITLE" | translate }}</th>
+                    <th>{{ "TABLEDESCR" | translate }}</th>
+                    <th>{{ "TABLESTATUS" | translate }}</th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-todo>
@@ -70,15 +66,15 @@
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
-                    Da fare
+                    {{ "TABLETODO" | translate }}
                 </div>
             </ng-template>
             <ng-template pTemplate="header">
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Status</th>
+                    <th>{{ "TABLETITLE" | translate }}</th>
+                    <th>{{ "TABLEDESCR" | translate }}</th>
+                    <th>{{ "TABLESTATUS" | translate }}</th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-todo>

@@ -10,7 +10,7 @@
                     [(ngModel)]="searchInput"
                     [suggestions]="searchResults"
                     (completeMethod)="searchMovies()"
-                    pTooltip="Il film che selezionerai apparirà in fondo alla pagina"
+                    pTooltip="The movie you select will appear at the bottom of the page"
                     tooltipPosition="left"
                 >
                     <ng-template let-movie pTemplate="item">
@@ -26,7 +26,9 @@
                         </div>
                     </ng-template></p-autoComplete
                 >
-                <label for="float-label">Cerca un film</label>
+                <label for="float-label">{{
+                    "LBLSEARCH-IMDB" | translate
+                }}</label>
             </span>
         </div>
     </div>
