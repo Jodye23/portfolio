@@ -16,7 +16,7 @@
     <p-table
         responsiveLayout="stack"
         scrollHeight="flex"
-        [tableStyle]="{ 'min-width': '15rem' }"
+        [tableStyle]="{ 'min-width': '20rem' }"
         [value]="[episode]"
         styleClass="p-datatable-gridlines border-1 surface-border border-round"
     >
@@ -49,7 +49,7 @@
                     {{ episode.title_romanji }}
                 </td>
                 <td>
-                    <span class="p-column-title"> Aired< </span>
+                    <span class="p-column-title"> Aired </span>
                     {{ episode.aired | date }}
                 </td>
                 <td>
