@@ -14,7 +14,7 @@
             responsiveLayout="stack"
             scrollHeight="flex"
             [value]="(todoList$ | async).todo"
-            [tableStyle]="{ 'min-width': '22rem' }"
+            [tableStyle]="{ 'min-width': '15rem' }"
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
@@ -87,7 +87,7 @@
             responsiveLayout="stack"
             scrollHeight="flex"
             [value]="(todoList$ | async).notTodo"
-            [tableStyle]="{ 'min-width': '22rem' }"
+            [tableStyle]="{ 'min-width': '15rem' }"
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
