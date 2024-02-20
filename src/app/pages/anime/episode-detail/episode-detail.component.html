@@ -14,7 +14,9 @@
     </div>
 
     <p-table
-        [tableStyle]="{ 'min-width': '60rem' }"
+        responsiveLayout="stack"
+        scrollHeight="flex"
+        [tableStyle]="{ 'min-width': '22rem' }"
         [value]="[episode]"
         styleClass="p-datatable-gridlines border-1 surface-border border-round"
     >
@@ -28,14 +30,32 @@
                 <th>Duration</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body">
+        <ng-template pTemplate="body" let-rowData="rowData" sortMode="multiple">
             <tr style="cursor: pointer">
-                <td>{{ episode.mal_id }}</td>
-                <td><a [href]="episode.url">Episode URL</a></td>
-                <td>{{ episode.title_japanese }}</td>
-                <td>{{ episode.title_romanji }}</td>
-                <td>{{ episode.aired | date }}</td>
-                <td>{{ episode.duration / 60 | number : "1.2" }} min</td>
+                <td>
+                    <span class="p-column-title"> N. </span>
+                    {{ episode.mal_id }}
+                </td>
+                <td>
+                    <span class="p-column-title"> URL </span>
+                    <a [href]="episode.url">Episode URL</a>
+                </td>
+                <td>
+                    <span class="p-column-title"> Title Japanese </span>
+                    {{ episode.title_japanese }}
+                </td>
+                <td>
+                    <span class="p-column-title"> Title Romanji </span>
+                    {{ episode.title_romanji }}
+                </td>
+                <td>
+                    <span class="p-column-title"> Aired< </span>
+                    {{ episode.aired | date }}
+                </td>
+                <td>
+                    <span class="p-column-title"> Duration </span>
+                    {{ episode.duration / 60 | number : "1.2" }} min
+                </td>
             </tr>
         </ng-template>
     </p-table>

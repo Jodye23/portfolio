@@ -2,8 +2,10 @@
     <app-navbar></app-navbar>
     <div class="pt-2">
         <p-table
+            responsiveLayout="stack"
+            scrollHeight="flex"
             [value]="teams"
-            [tableStyle]="{ 'min-width': '50rem' }"
+            [tableStyle]="{ 'min-width': '22rem' }"
             styleClass="p-datatable-gridlines border-1 surface-border border-round"
         >
             <ng-template pTemplate="caption">
@@ -38,15 +40,40 @@
                     <th>{{ "TABLENBA-FAV" | translate }}</th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-team>
+            <ng-template
+                pTemplate="body"
+                let-team
+                let-rowData="rowData"
+                sortMode="multiple"
+            >
                 <tr
                     class="transition-colors transition-duration-500 bg-none hover:bg-primary"
                 >
-                    <td>{{ team.abbreviation }}</td>
-                    <td>{{ team.full_name }}</td>
-                    <td>{{ team.conference }}</td>
-                    <td>{{ team.division }}</td>
                     <td>
+                        <span class="p-column-title">
+                            {{ "TABLENBA-SHORTNAME" | translate }}
+                        </span>
+                        {{ team.abbreviation }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLENBA-FULLNAME" | translate }}
+                        </span>
+                        {{ team.full_name }}
+                    </td>
+                    <td>
+                        <span class="p-column-title"> Conference </span>
+                        {{ team.conference }}
+                    </td>
+                    <td>
+                        <span class="p-column-title"> Division </span>
+                        {{ team.division }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLENBA-FAV" | translate }}
+                        </span>
+
                         <i
                             [style]="{ color: 'orange' }"
                             [text]="true"

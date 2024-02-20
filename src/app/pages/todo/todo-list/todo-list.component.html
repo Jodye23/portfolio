@@ -11,8 +11,10 @@
 
     <div class="my-5">
         <p-table
+            responsiveLayout="stack"
+            scrollHeight="flex"
             [value]="(todoList$ | async).todo"
-            [tableStyle]="{ 'min-width': '60rem' }"
+            [tableStyle]="{ 'min-width': '22rem' }"
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
@@ -27,23 +29,44 @@
                     <th>{{ "TABLESTATUS" | translate }}</th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-todo>
+            <ng-template
+                pTemplate="body"
+                let-todo
+                let-rowData="rowData"
+                sortMode="multiple"
+            >
                 <tr style="cursor: pointer">
                     <td>
+                        <span class="p-column-title"> # </span>
+
                         <i
                             class="pi pi-check-circle"
                             style="font-size: 1.5rem"
                         ></i>
                     </td>
-                    <td>{{ todo.title }}</td>
-                    <td>{{ todo.description }}</td>
                     <td>
+                        <span class="p-column-title">
+                            {{ "TABLETITLE" | translate }}
+                        </span>
+                        {{ todo.title }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLEDESCR" | translate }}
+                        </span>
+                        {{ todo.description }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLESTATUS" | translate }}
+                        </span>
+
                         <!-- {{todo.status}} -->
                         <div>
                             <span>
                                 <strong>{{ todo.status }}</strong>
                             </span>
-                            <div class="my-2">
+                            <div class="my-2 ml-2">
                                 <p-button
                                     *ngFor="let type of typeTodoStatus"
                                     severity="success"
@@ -61,8 +84,10 @@
 
     <div>
         <p-table
+            responsiveLayout="stack"
+            scrollHeight="flex"
             [value]="(todoList$ | async).notTodo"
-            [tableStyle]="{ 'min-width': '60rem' }"
+            [tableStyle]="{ 'min-width': '22rem' }"
         >
             <ng-template pTemplate="caption">
                 <div class="flex align-items-center justify-content-between">
@@ -77,20 +102,41 @@
                     <th>{{ "TABLESTATUS" | translate }}</th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-todo>
+            <ng-template
+                pTemplate="body"
+                let-todo
+                let-rowData="rowData"
+                sortMode="multiple"
+            >
                 <tr style="cursor: pointer">
                     <td>
+                        <span class="p-column-title"> # </span>
+
                         <i class="pi pi-circle" style="font-size: 1.5rem"></i>
                     </td>
-                    <td>{{ todo.title }}</td>
-                    <td>{{ todo.description }}</td>
                     <td>
+                        <span class="p-column-title">
+                            {{ "TABLETITLE" | translate }}
+                        </span>
+                        {{ todo.title }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLEDESCR" | translate }}
+                        </span>
+                        {{ todo.description }}
+                    </td>
+                    <td>
+                        <span class="p-column-title">
+                            {{ "TABLESTATUS" | translate }}
+                        </span>
+
                         <!-- {{todo.status}} -->
                         <div class="inline-block">
                             <span>
                                 <strong>{{ todo.status }}</strong>
                             </span>
-                            <div class="my-2">
+                            <div class="my-2 ml-2">
                                 <p-button
                                     severity="secondary"
                                     *ngFor="let type of typeTodoStatus"

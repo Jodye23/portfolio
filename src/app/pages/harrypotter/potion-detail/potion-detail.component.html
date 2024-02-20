@@ -33,8 +33,10 @@
         <div class="mt-5">
             <div *ngIf="elixir.ingredients.length">
                 <p-table
+                    responsiveLayout="stack"
+                    scrollHeight="flex"
                     [value]="elixir.ingredients"
-                    [tableStyle]="{ 'min-width': '60rem' }"
+                    [tableStyle]="{ 'min-width': '22rem' }"
                     styleClass="p-datatable-gridlines border-1 surface-border border-round"
                 >
                     <ng-template pTemplate="caption">
@@ -49,12 +51,20 @@
                             <th>Name</th>
                         </tr>
                     </ng-template>
-                    <ng-template pTemplate="body" let-ingredient>
+                    <ng-template
+                        pTemplate="body"
+                        let-ingredient
+                        let-rowData="rowData"
+                        sortMode="multiple"
+                    >
                         <tr
                             style="cursor: pointer"
                             class="transition-colors transition-duration-500 bg-none hover:bg-primary"
                         >
-                            <td>{{ ingredient.name }}</td>
+                            <td>
+                                <span class="p-column-title"> Name </span>
+                                {{ ingredient.name }}
+                            </td>
                         </tr>
                     </ng-template>
                 </p-table>
@@ -66,8 +76,10 @@
         <div class="mt-5">
             <div *ngIf="elixir.inventors.length">
                 <p-table
+                    responsiveLayout="stack"
+                    scrollHeight="flex"
                     [value]="elixir.inventors"
-                    [tableStyle]="{ 'min-width': '60rem' }"
+                    [tableStyle]="{ 'min-width': '22rem' }"
                     styleClass="p-datatable-gridlines border-1 surface-border border-round"
                 >
                     <ng-template pTemplate="caption">
@@ -83,14 +95,25 @@
                             <th>Surname</th>
                         </tr>
                     </ng-template>
-                    <ng-template pTemplate="body" let-inventor>
+                    <ng-template
+                        pTemplate="body"
+                        let-inventor
+                        let-rowData="rowData"
+                        sortMode="multiple"
+                    >
                         <tr
                             (click)="inventorDetail(inventor.id)"
                             style="cursor: pointer"
                             class="transition-colors transition-duration-500 bg-none hover:bg-primary"
                         >
-                            <td>{{ inventor.name }}</td>
-                            <td>{{ inventor.surname }}</td>
+                            <td>
+                                <span class="p-column-title"> Name </span>
+                                {{ inventor.name }}
+                            </td>
+                            <td>
+                                <span class="p-column-title"> Surname </span>
+                                {{ inventor.surname }}
+                            </td>
                         </tr>
                     </ng-template>
                 </p-table>
