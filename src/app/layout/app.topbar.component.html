@@ -31,6 +31,7 @@
         }"
     >
         <button
+            *ngIf="isDarkButtonVisible"
             class="p-link h-3rem w-2rem"
             (click)="changeTheme('lara-dark-indigo', 'dark')"
             [ngClass]="{ active: colorScheme === 'dark' }"
@@ -39,6 +40,7 @@
         </button>
 
         <button
+            *ngIf="isLightButtonVisible"
             class="p-link h-3rem w-2rem"
             (click)="changeTheme('lara-light-indigo', 'light')"
             [ngClass]="{ active: colorScheme === 'light' }"

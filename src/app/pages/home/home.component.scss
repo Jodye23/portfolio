@@ -3,3 +3,39 @@ span:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
 }
+
+#container {
+    background: linear-gradient(to right, rgb(31, 41, 55), rgb(6, 10, 21));
+}
+
+.light #container {
+    background: linear-gradient(to right, #ffffff, rgb(148, 150, 154));
+}
+
+@media only screen and (max-width: 767px) {
+    #container {
+        background: linear-gradient(to bottom, rgb(31, 41, 55), rgb(6, 10, 21));
+    }
+
+    .light #container {
+        background: linear-gradient(to bottom, #ffffff, rgb(148, 150, 154));
+    }
+}
+
+#container2 {
+    background: linear-gradient(to right, rgb(31, 41, 55), rgb(6, 10, 21));
+}
+
+.light #container2 {
+    background: linear-gradient(to right, #ffffff, rgb(148, 150, 154));
+}
+
+@media only screen and (max-width: 767px) {
+    #container2 {
+        background: linear-gradient(to top, rgb(31, 41, 55), rgb(6, 10, 21));
+    }
+
+    .light #container2 {
+        background: linear-gradient(to top, #ffffff, rgb(148, 150, 154));
+    }
+}

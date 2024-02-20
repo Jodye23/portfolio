@@ -1,5 +1,5 @@
-<div class="card p-0 m-0 overflow-hidden">
-    <div class="grid grid-nogutter text-800">
+<div class="card p-0 m-0 overflow-hidden" [ngClass]="colorScheme">
+    <div class="grid grid-nogutter text-800" id="container">
         <div
             class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
         >
@@ -118,7 +118,7 @@
             />
         </div>
     </div>
-    <div class="px-4 py-6 md:px-6 lg:px-8 text-center">
+    <div class="px-4 py-6 md:px-6 lg:px-8 text-center" id="container2">
         <div class="mb-5 font-bold text-3xl fadein animation-duration-1000">
             <span class="text-900">{{ "SKILL" | translate }} </span>
             <span class="text-primary-600">{{ "MAIN" | translate }}</span>
