@@ -9,7 +9,7 @@ span:hover {
 }
 
 .light #container {
-    background: linear-gradient(to right, #ffffff, rgb(148, 150, 154));
+    background: linear-gradient(to right, #ffffff, rgb(200, 200, 200));
 }
 
 @media only screen and (max-width: 767px) {
@@ -18,7 +18,7 @@ span:hover {
     }
 
     .light #container {
-        background: linear-gradient(to bottom, #ffffff, rgb(148, 150, 154));
+        background: linear-gradient(to bottom, #ffffff, rgb(200, 200, 200));
     }
 }
 
@@ -27,7 +27,7 @@ span:hover {
 }
 
 .light #container2 {
-    background: linear-gradient(to right, #ffffff, rgb(148, 150, 154));
+    background: linear-gradient(to right, #ffffff, rgb(200, 200, 200));
 }
 
 @media only screen and (max-width: 767px) {
@@ -36,6 +36,6 @@ span:hover {
     }
 
     .light #container2 {
-        background: linear-gradient(to top, #ffffff, rgb(148, 150, 154));
+        background: linear-gradient(to top, #ffffff, rgb(200, 200, 200));
     }
 }
