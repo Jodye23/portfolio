@@ -1,5 +1,4 @@
 span:hover {
-    cursor: pointer;
     transform: scale(1.05);
     transition: transform 0.2s;
 }
@@ -38,4 +37,8 @@ span:hover {
     .light #container2 {
         background: linear-gradient(to top, #ffffff, rgb(200, 200, 200));
     }
+}
+
+.icon-container {
+    text-align: center;
 }

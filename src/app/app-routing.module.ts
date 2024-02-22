@@ -17,6 +17,7 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'books', loadChildren: () => import('./pages/books/books.module').then(m => m.BooksModule) },
                     { path: 'login', loadChildren: () => import('./pages/todo/todo.module').then(m => m.TodoModule) },
                     { path: 'chuck', loadChildren: () => import('./pages/chuck/chuck.module').then(m => m.ChuckModule) },
+                    { path: 'babystats', loadChildren: () => import('./pages/babys/babys.module').then(m => m.BabysModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },

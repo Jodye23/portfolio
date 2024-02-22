@@ -1,0 +1,66 @@
+<div class="card flex align-item-center justify-content-center">
+    <div class="card p-4 shadow-6 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <div class="text-900 text-3xl text-primary font-bold mb-3">
+                Create your user
+            </div>
+        </div>
+        <form [formGroup]="userRegistration">
+            <div class="field col">
+                <label for="title" class="block text-900 font-medium mb-2">
+                    Nome
+                </label>
+                <input
+                    placeholder="..."
+                    pInputText
+                    id="name"
+                    formControlName="name"
+                    class="w-full mb-3"
+                />
+            </div>
+            <div class="field col">
+                <label for="surname" class="block text-900 font-medium mb-2"
+                    >Surname</label
+                >
+                <input
+                    placeholder="..."
+                    pInputText
+                    id="surname"
+                    formControlName="surname"
+                    class="w-full mb-3"
+                />
+            </div>
+            <div class="field col">
+                <label for="password" class="block text-900 font-medium mb-2"
+                    >Password</label
+                >
+                <input
+                    placeholder="..."
+                    pInputText
+                    id="password"
+                    formControlName="password"
+                    class="w-full mb-3"
+                    type="password"
+                />
+            </div>
+            <div class="field col">
+                <label for="dateOfBirth" class="block text-900 font-medium mb-2"
+                    >Date of birth</label
+                >
+                <input
+                    placeholder="..."
+                    pInputText
+                    id="dateOfBirth"
+                    formControlName="dateOfBirth"
+                    class="w-full mb-3"
+                    type="date"
+                />
+            </div>
+            <p-button
+                label="Sign in"
+                (click)="save()"
+                class="flex align-item-center justify-content-center"
+            ></p-button>
+        </form>
+    </div>
+</div>
