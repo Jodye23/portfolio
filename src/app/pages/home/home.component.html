@@ -111,18 +111,15 @@
         <div
             class="col-12 md:col-6 p-6 overflow-hidden border-round fadeinright animation-duration-1000"
         >
-            <div class="p-grid pt-5">
+            <div class="p-grid">
                 <div class="p-col-12">
                     <h5
                         class="text-center block text-5xl font-bold mb-1 text-primary"
                     >
-                        Introduzione
+                        {{ "INTRO" | translate }}
                     </h5>
-                    <p class="text-justify pt-6">
-                        Questo spazio virtuale racchiude diverse app, ognuna un
-                        capitolo della mia esperienza con Angular. Dai
-                        un'occhiata al mio CV, esplora un progetto su Figma e
-                        immergiti nelle app attraverso il carosello qui sotto
+                    <p class="text-justify pt-3">
+                        {{ "DESCRINTR" | translate }}
                     </p>
                     <p-carousel
                         [value]="icons"
@@ -134,12 +131,17 @@
                     >
                         <ng-template let-icon pTemplate="item">
                             <div
-                                class="icon-container cursor-pointer pt-4"
+                                class="icon-container pt-6"
                                 (click)="onIconClick(icon)"
                             >
-                                <i [class]="icon.icon"></i>
-                                <div>{{ icon.label }}</div>
-                                <div class="pt-6">
+                                <i
+                                    [class]="icon.icon"
+                                    class="text-primary cursor-pointer"
+                                ></i>
+                                <div class="cursor-pointer">
+                                    {{ icon.label }}
+                                </div>
+                                <div class="pt-8">
                                     {{ icon.description }}
                                 </div>
                             </div>

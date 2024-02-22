@@ -17,12 +17,12 @@ export class HomeComponent implements OnInit {
   title: string = 'cvPdf';
   colorScheme: string;
   icons = [
-    { label: 'Nba', icon: 'pi pi-fw pi-tablet', routerLink: ['nba/home'], description: "Esplora una home estetica e scopri squadre con una lista filtrabile. Un'esperienza coinvolgente per gli amanti della pallacanestro!" },
-    { label: 'Imdb', icon: 'pi pi-fw pi-video', routerLink: ['imdb'], description: "Esplora film con una ricerca avanzata, dettagliate informazioni sui film e un'interfaccia intuitiva. Scopri il mondo del cinema in un clic!" },
-    { label: 'Anime', icon: 'pi pi-fw pi-eye', routerLink: ['anime'], description: "Entra nel mondo degli anime con una navigazione avanzata, modelli accattivanti e una barra di ricerca dinamica. L'avventura ti aspetta!" },
-    { label: 'Harry', icon: 'pi pi-fw pi-bolt', routerLink: 'harry', description: "Entra nel mondo degli anime con una navigazione avanzata, modelli accattivanti e una barra di ricerca dinamica. L'avventura ti aspetta!" },
-    { label: 'Books', icon: 'pi pi-fw pi-book', routerLink: ['books'], description: "Una piattaforma completa con funzionalità CRUD per interagire con la tua lista di libri preferiti. Scopri, leggi, gestisci!" },
-    { label: 'To-do', icon: 'pi pi-fw pi-wrench', routerLink: ['login'], description: "Mantieni il controllo con un'app Todo dotata di uno stato sempre aggiornato grazie all'utilizzo del BehaviorSubject. Sicura e organizzata!" },
+    { label: 'Nba', icon: 'pi pi-fw pi-tablet', routerLink: ['nba/home'], description: "Esplorate una home dettagliata e scoprite le varie squadre con una lista filtrabile per categoria" },
+    { label: 'Imdb', icon: 'pi pi-fw pi-video', routerLink: ['imdb'], description: "Esplora vari film con una searchbar e scoprite con un solo click le informazioni sui film " },
+    { label: 'Anime', icon: 'pi pi-fw pi-eye', routerLink: ['anime'], description: "Entra nel mondo degli anime con quest'app che utilizza un routing avanzato per navigare sui dettagli dei tuoi anime preferiti" },
+    { label: 'Harry', icon: 'pi pi-fw pi-bolt', routerLink: 'harry', description: "Scopri i maghi del mondo di Harry Potter, i loro incantesimi più famosi e altri dettagli interessanti" },
+    { label: 'Books', icon: 'pi pi-fw pi-book', routerLink: ['books'], description: "Una piattaforma completa con funzionalità CRUD per interagire con la tua lista di libri preferiti" },
+    { label: 'To-do', icon: 'pi pi-fw pi-wrench', routerLink: ['login'], description: "Mantieni il controllo con un'app Todo dotata di uno stato sempre aggiornato grazie all'utilizzo del BehaviorSubject" },
     { label: 'Babies', icon: 'pi pi-fw pi-user-plus', routerLink: ['babystats'], description: "Descrizione Babies" }
   ];
 
@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
     this.translate.addLangs(['it', 'en']);
     this.translate.setDefaultLang('it');
   }
+
   ngOnInit(): void {
     this.themeService.colorScheme$.subscribe((colorScheme) => {
       this.colorScheme = colorScheme;

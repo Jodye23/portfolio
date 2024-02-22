@@ -33,5 +33,7 @@
     "TABLESTATUS": "Stato",
     "TABLETODO": "Da fare",
     "MODALTODOTITLE": "Titolo",
-    "MODALTODODESCR": "Descrizione"
+    "MODALTODODESCR": "Descrizione",
+    "INTRO": "Introduzione",
+    "DESCRINTR": "Questo spazio virtuale racchiude diverse app, ognuna un capitolo della mia esperienza con Angular. Dai un'occhiata al mio CV, esplora un progetto su Figma ed esplora le app attraverso il carosello qui sotto"
 }
