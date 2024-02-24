@@ -2,7 +2,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from "./service/app.layout.service";
 import { TranslateService } from '@ngx-translate/core';
-import { ThemeService } from '../shared/services/theme.service';
 
 @Component({
     selector: 'app-topbar',
@@ -27,7 +26,7 @@ export class AppTopBarComponent {
 
     @ViewChild('topbarmenu') menu!: ElementRef;
 
-    constructor(public layoutService: LayoutService, private translate: TranslateService, private themeService: ThemeService) { }
+    constructor(public layoutService: LayoutService, private translate: TranslateService) { }
 
     set theme(val: string) {
         this.layoutService.config.update((config) => ({
@@ -50,7 +49,6 @@ export class AppTopBarComponent {
     }
 
     changeTheme(theme: string, colorScheme: string) {
-        this.themeService.updateColorScheme(colorScheme);
         this.theme = theme;
         this.colorScheme = colorScheme;
         if (colorScheme === 'dark') {

@@ -20,8 +20,7 @@
                         >
                             <div>
                                 <strong>Film: </strong>{{ movie["#TITLE"] }} -
-                                <strong>Year: </strong>{{ movie["#YEAR"] }} -
-                                <strong>Actors: </strong>{{ movie["#ACTORS"] }}
+                                <strong>Year: </strong>{{ movie["#YEAR"] }}
                             </div>
                         </div>
                     </ng-template></p-autoComplete
@@ -45,7 +44,10 @@
                 class="border-1 surface-border border-round m-2 text-center py-5 px-3"
             >
                 <div class="mb-3">
-                    <img [src]="movie.image" class="w-3 shadow-4" />
+                    <img
+                        [src]="movie.image"
+                        class="w-3 shadow-4 border-round"
+                    />
                 </div>
                 <div>
                     <h4 class="mb-1 text-primary">{{ movie.title }}</h4>
@@ -65,11 +67,12 @@
                     style="max-width: 250px"
                     [src]="selectedMovie.image"
                     alt="{{ selectedMovie.title }}"
+                    class="shadow-6 border-round"
                 />
             </div>
-            <div class="pl-5">
+            <div class="pl-3">
                 <div>
-                    <h2 class="text-primary">{{ selectedMovie.title }}</h2>
+                    <h2 class="text-primary pt-2">{{ selectedMovie.title }}</h2>
                     <p>
                         <small
                             ><strong>Year:</strong>
@@ -91,7 +94,7 @@
                         <strong>Plot:</strong> <br />
                         {{ selectedMovie.description }}
                     </p>
-                    <div class="mt-8">
+                    <div class="mt-6">
                         <strong class="flex justify-content-center"
                             >Rate:</strong
                         >

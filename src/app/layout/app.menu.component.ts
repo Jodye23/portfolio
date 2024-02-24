@@ -28,8 +28,7 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Anime', icon: 'pi pi-fw pi-eye', routerLink: ['anime'] },
                     { label: 'Harry', icon: 'pi pi-fw pi-bolt', routerLink: 'harry' },
                     { label: 'Books', icon: 'pi pi-fw pi-book', routerLink: ['books'] },
-                    { label: 'To-do', icon: 'pi pi-fw pi-wrench', routerLink: ['login'] },
-                    { label: 'Babies', icon: 'pi pi-fw pi-user-plus', routerLink: ['babystats'] }
+                    { label: 'To-do', icon: 'pi pi-fw pi-wrench', routerLink: ['login'] }
                 ]
             },
         ];
