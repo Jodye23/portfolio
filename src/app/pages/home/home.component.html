@@ -36,26 +36,32 @@
                     <div>
                         <p>
                             <strong>{{ "BIRTHANDWHERE" | translate }} </strong>
-                            Roma, 23/01/1999
+                        </p>
+                        <p class="text-center">Roma, 23/01/1999</p>
+                        <p-divider></p-divider>
+                        <p>
+                            <strong>{{ "RESIDENCE" | translate }} </strong>
+                        </p>
+                        <p class="text-center">
+                            Via Nicolò Paganini 4, Cerveteri (Roma)
                         </p>
                         <p-divider></p-divider>
                         <p>
-                            <strong>{{ "RESIDENCE" | translate }} </strong> Via
-                            Nicolò Paganini 4, Cerveteri (Roma)
+                            <strong>Email: </strong>
+                        </p>
+                        <p class="text-center">
+                            <a href="mailto:{{ email }}">{{ email }}</a>
                         </p>
                         <p-divider></p-divider>
                         <p>
-                            <strong>Email: </strong
-                            ><a href="mailto:{{ email }}">{{ email }}</a>
+                            <strong>{{ "PHONE" | translate }} </strong>
                         </p>
-                        <p-divider></p-divider>
-                        <p>
-                            <strong>{{ "PHONE" | translate }} </strong> 349 709
-                            0707
-                        </p>
+                        <p class="text-center">349-709-0707</p>
                         <p-divider></p-divider>
                         <p>
                             <strong>LinkedIn: </strong>
+                        </p>
+                        <p class="text-center">
                             <a href="https://t.ly/-Cz7C" target="_blank"
                                 >Marco Valerio Torriero</a
                             >
@@ -95,7 +101,7 @@
                 <p-dialog
                     header="Figma"
                     [(visible)]="visibleFigma"
-                    [style]="{ width: '25rem' }"
+                    [style]="{ width: '28rem', height: '49rem' }"
                 >
                     <div class="flex align-item-center justify-content-center">
                         <video
@@ -104,6 +110,32 @@
                             src="assets/Figma App.mp4"
                             style="width: 100%"
                         ></video>
+                    </div>
+                    <div
+                        class="flex align-item-center justify-content-center pt-4"
+                    >
+                        <h5>Progettazione</h5>
+                    </div>
+                    <div class="flex align-item-center justify-content-center">
+                        <img
+                            src="../../../assets/figmascreen2.png"
+                            alt=""
+                            style="width: 100%"
+                        />
+                    </div>
+                    <div class="flex align-item-center justify-content-center">
+                        <img
+                            src="../../../assets/figmascreen3.png"
+                            alt=""
+                            style="width: 100%"
+                        />
+                    </div>
+                    <div class="flex align-item-center justify-content-center">
+                        <img
+                            src="../../../assets/figmascreen1.png"
+                            alt=""
+                            style="width: 100%"
+                        />
                     </div>
                 </p-dialog>
             </section>
@@ -127,7 +159,7 @@
                         [numScroll]="1"
                         style="margin-top: 20px"
                         [circular]="true"
-                        autoplayInterval="4000"
+                        autoplayInterval="3000"
                     >
                         <ng-template let-icon pTemplate="item">
                             <div
