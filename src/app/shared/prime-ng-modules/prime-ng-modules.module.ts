@@ -25,8 +25,9 @@ import { DividerModule } from 'primeng/divider';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { TranslateModule } from '@ngx-translate/core';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
-const PrimeNgModules = [HttpClientModule, FormsModule, ReactiveFormsModule, CardModule, ButtonModule, TabMenuModule, InputGroupModule, InputGroupAddonModule, InputTextModule, TableModule, ListboxModule, CarouselModule, AutoCompleteModule, ToastModule, TooltipModule, RatingModule, DataViewModule, DialogModule, DynamicDialogModule, ScrollTopModule, CheckboxModule, AutoFocusModule, DividerModule, PdfViewerModule, TranslateModule, RadioButtonModule];
+const PrimeNgModules = [HttpClientModule, FormsModule, ReactiveFormsModule, CardModule, ButtonModule, TabMenuModule, InputGroupModule, InputGroupAddonModule, InputTextModule, TableModule, ListboxModule, CarouselModule, AutoCompleteModule, ToastModule, TooltipModule, RatingModule, DataViewModule, DialogModule, DynamicDialogModule, ScrollTopModule, CheckboxModule, AutoFocusModule, DividerModule, PdfViewerModule, TranslateModule, RadioButtonModule, ProgressSpinnerModule];
 
 @NgModule({
   declarations: [],

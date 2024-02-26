@@ -35,5 +35,12 @@
     "MODALTODOTITLE": "Title",
     "MODALTODODESCR": "Description",
     "INTRO": "Intro",
-    "DESCRINTR": "This virtual space contains several apps, each a chapter of my experience with Angular. Check out my CV, explore a project on Figma, and explore apps through the carousel below"
+    "DESCRINTR": "This virtual space contains several apps, each a chapter of my experience with Angular. Check out my CV, explore a project on Figma, and explore apps through the carousel below",
+    "CRED": "You can enter with some fancy credentials",
+    "NBA_DESCRIPTION": "Explore a detailed home page and discover the various teams with a list that can be filtered by category",
+    "IMDB_DESCRIPTION": "Explore various movies with a searchbar and discover movie information with just one click",
+    "ANIME_DESCRIPTION": "Enter the world of anime with this app that uses advanced routing to navigate to the details of your favorite anime",
+    "HARRY_DESCRIPTION": "Discover the wizards of the world of Harry Potter, their most famous spells and other interesting details",
+    "BOOKS_DESCRIPTION": "A complete platform with CRUD functionality to interact with your favorite book list",
+    "TODO_DESCRIPTION": "Stay in control with a Todo app that always has up-to-date status using BehaviorSubject"
 }

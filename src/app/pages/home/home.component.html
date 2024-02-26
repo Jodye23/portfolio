@@ -1,22 +1,16 @@
 <div class="card p-0 m-0 overflow-hidden">
     <div class="grid grid-nogutter text-800" id="container">
         <div
-            class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center"
+            class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center fadeinleft animation-duration-1000 animation-ease-in-out"
         >
-            <section class="overflow-hidden">
-                <div
-                    class="block text-6xl font-bold mb-1 fadeinup animation-duration-1000"
-                >
+            <section class="intro">
+                <div class="block text-6xl font-bold mb-1">
                     Marco Valerio Torriero
                 </div>
-                <div
-                    class="text-6xl text-primary font-bold mb-3 fadeinup animation-duration-1000"
-                >
+                <div class="text-6xl text-primary font-bold mb-3">
                     Front-End Web Developer
                 </div>
-                <p
-                    class="mt-0 mb-4 text-700 line-height-3 fadein animation-duration-1000 text-justify"
-                >
+                <p class="mt-0 mb-4 text-700 line-height-3 text-justify">
                     {{ "ABOUTME" | translate }}
                 </p>
 
@@ -25,7 +19,7 @@
                     pRipple
                     label="Info"
                     type="button"
-                    class="mr-3 ml-1 p-button-raised fadeindown animation-duration-1000"
+                    class="mr-3 ml-1 p-button-raised"
                     (click)="showInfo()"
                 ></button>
                 <p-dialog
@@ -73,7 +67,7 @@
                     pRipple
                     label="CV"
                     type="button"
-                    class="p-button-rounded fadeindown animation-duration-1000"
+                    class="p-button-rounded"
                     (click)="showCv()"
                 ></button>
                 <p-dialog
@@ -95,15 +89,31 @@
                     pRipple
                     label="Figma App"
                     type="button"
-                    class="mt-3 ml-2 mb-2 p-button-raised p-button-text fadeindown animation-duration-1000"
+                    class="mt-3 ml-2 mb-2 p-button-raised p-button-text"
                     (click)="showFigma()"
                 ></button>
                 <p-dialog
                     header="Figma"
                     [(visible)]="visibleFigma"
-                    [style]="{ width: '28rem', height: '49rem' }"
+                    [style]="{ width: '30rem', height: '80rem' }"
                 >
                     <div class="flex align-item-center justify-content-center">
+                        <h5>Corso design UX/UI con BSD design</h5>
+                    </div>
+                    <div
+                        class="flex align-item-center justify-content-center pt-1 text-justify"
+                    >
+                        <p>
+                            Durante il workshop siamo stati divisi in gruppi e
+                            ci è stato chiesto di progettare una UI/UX per sito
+                            web da mobile. Io e Lorenzo Baratti abbiamo scelto
+                            di progettare un sito web di una azienda web-dev dal
+                            nome DevGenius.
+                        </p>
+                    </div>
+                    <div
+                        class="flex align-item-center justify-content-center pt-2"
+                    >
                         <video
                             muted
                             controls
@@ -112,7 +122,7 @@
                         ></video>
                     </div>
                     <div
-                        class="flex align-item-center justify-content-center pt-4"
+                        class="flex align-item-center justify-content-center pt-8"
                     >
                         <h5>Progettazione</h5>
                     </div>
@@ -139,7 +149,7 @@
                     </div>
                     <div class="flex align-item-center justify-content-center">
                         <img
-                            src="../../../assets/figmascreen.png"
+                            src="../../../assets/figmascreen4.png"
                             alt=""
                             style="width: 100%"
                         />
@@ -148,9 +158,12 @@
             </section>
         </div>
         <div
-            class="col-12 md:col-6 p-6 overflow-hidden border-round fadeinright animation-duration-1000"
+            class="col-12 md:col-6 p-6 overflow-hidden fadeinright animation-duration-1000 carousel animation-ease-in-out"
+            pAnimateOnScroll
+            enterClass="fadeinright"
+            leaveClass="fadeoutright"
         >
-            <div class="p-grid md:pt-7">
+            <div class="p-grid md:pt-7 carosello">
                 <div class="p-col-12">
                     <h5
                         class="text-center block text-5xl font-bold mb-1 text-primary"
@@ -181,7 +194,11 @@
                                     {{ icon.label }}
                                 </div>
                                 <div class="pt-6">
-                                    {{ icon.description }}
+                                    {{
+                                        getTranslatedDescription(
+                                            icon.description
+                                        )
+                                    }}
                                 </div>
                             </div>
                         </ng-template>
@@ -190,8 +207,11 @@
             </div>
         </div>
     </div>
-    <div class="px-4 py-6 md:px-6 lg:px-8 text-center" id="container2">
-        <div class="mb-5 font-bold text-3xl fadein animation-duration-1000">
+    <div
+        class="px-4 py-6 md:px-6 lg:px-8 text-center fadeindown animation-duration-1000 animation-ease-in-out"
+        id="container2"
+    >
+        <div class="mb-5 font-bold text-3xl">
             <span class="text-900">{{ "SKILL" | translate }} </span>
             <span class="text-primary-600">{{ "MAIN" | translate }}</span>
         </div>

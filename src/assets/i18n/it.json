@@ -35,5 +35,12 @@
     "MODALTODOTITLE": "Titolo",
     "MODALTODODESCR": "Descrizione",
     "INTRO": "Introduzione",
-    "DESCRINTR": "Questo spazio virtuale racchiude diverse app, ognuna un capitolo della mia esperienza con Angular. Dai un'occhiata al mio CV, esplora un progetto su Figma ed esplora le app attraverso il carosello qui sotto"
+    "DESCRINTR": "Questo spazio virtuale racchiude diverse app, ognuna un capitolo della mia esperienza con Angular. Dai un'occhiata al mio CV, esplora un progetto su Figma ed esplora le app attraverso il carosello qui sotto",
+    "CRED": "Puoi entrare con delle credenziali di fantasia",
+    "NBA_DESCRIPTION": "Esplorate una home dettagliata e scoprite le varie squadre con una lista filtrabile per categoria",
+    "IMDB_DESCRIPTION": "Esplora vari film con una searchbar e scoprite con un solo click le informazioni sui film",
+    "ANIME_DESCRIPTION": "Entra nel mondo degli anime con quest'app che utilizza un routing avanzato per navigare sui dettagli dei tuoi anime preferiti",
+    "HARRY_DESCRIPTION": "Scopri i maghi del mondo di Harry Potter, i loro incantesimi più famosi e altri dettagli interessanti",
+    "BOOKS_DESCRIPTION": "Una piattaforma completa con funzionalità CRUD per interagire con la tua lista di libri preferiti",
+    "TODO_DESCRIPTION": "Mantieni il controllo con un'app Todo dotata di uno stato sempre aggiornato grazie all'utilizzo del BehaviorSubject"
 }
