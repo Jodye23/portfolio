@@ -7,10 +7,9 @@ import { Team } from '../models/team.model';
   providedIn: 'root'
 })
 export class NbaService {
-  private url = 'https://free-nba.p.rapidapi.com/teams';
+  private url = 'https://api.balldontlie.io/v1/teams';
   private headers = {
-    'X-RapidAPI-Key': '6fd61145f8mshe4acdfbcca3dd7ap1258a9jsn06022d61f486',
-    'X-RapidAPI-Host': 'free-nba.p.rapidapi.com'
+    'Authorization': 'efc38be1-d3d6-48c9-abff-3831bfb8bb3e'
   };
 
   constructor(private http: HttpClient) { }
