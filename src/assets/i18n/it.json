@@ -42,5 +42,8 @@
     "ANIME_DESCRIPTION": "Entra nel mondo degli anime con quest'app che utilizza un routing avanzato per navigare sui dettagli dei tuoi anime preferiti",
     "HARRY_DESCRIPTION": "Scopri i maghi del mondo di Harry Potter, i loro incantesimi più famosi e altri dettagli interessanti",
     "BOOKS_DESCRIPTION": "Una piattaforma completa con funzionalità CRUD per interagire con la tua lista di libri preferiti",
-    "TODO_DESCRIPTION": "Mantieni il controllo con un'app Todo dotata di uno stato sempre aggiornato grazie all'utilizzo del BehaviorSubject"
+    "TODO_DESCRIPTION": "Mantieni il controllo con un'app Todo dotata di uno stato sempre aggiornato grazie all'utilizzo del BehaviorSubject",
+    "FIGMA_TITLEMODAL": "Corso design UX/UI con BSD design",
+    "FIGMA_DESCRMODAL": "Durante il workshop siamo stati divisi in gruppi e ci è stato chiesto di progettare un'interfaccia per sito web da mobile. Io e il mio compagno di corso Lorenzo Baratti abbiamo scelto di progettare un sito web di una azienda web-dev dal nome DevGenius",
+    "FIGMA_2TITLEMODAL": "Progettazione e sviluppo"
 }

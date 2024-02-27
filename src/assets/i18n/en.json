@@ -2,7 +2,7 @@
     "ABOUTME": "Hello everyone, I'm MVT, a young coding enthusiast, and I recently embraced the role of Front-end Web Developer specializing in Angular thanks to the 24ORE Business School course. In my portfolio, you can discover the projects I've worked on. I can't wait to share my passion for the world of web development with you. Thank you for being here, and happy exploration!",
     "BIRTHANDWHERE": "Place and date of birth:",
     "RESIDENCE": "Residence:",
-    "PHONE": "Cellphone number:",
+    "PHONE": "Cell number:",
     "SKILL": "Main",
     "MAIN": "skills",
     "ANGULAR": "JavaScript framework for developing dynamic and interactive web applications",
@@ -42,5 +42,8 @@
     "ANIME_DESCRIPTION": "Enter the world of anime with this app that uses advanced routing to navigate to the details of your favorite anime",
     "HARRY_DESCRIPTION": "Discover the wizards of the world of Harry Potter, their most famous spells and other interesting details",
     "BOOKS_DESCRIPTION": "A complete platform with CRUD functionality to interact with your favorite book list",
-    "TODO_DESCRIPTION": "Stay in control with a Todo app that always has up-to-date status using BehaviorSubject"
+    "TODO_DESCRIPTION": "Stay in control with a Todo app that always has up-to-date status using BehaviorSubject",
+    "FIGMA_TITLEMODAL": "UX/UI design course with BSD design",
+    "FIGMA_DESCRMODAL": "During the workshop we were divided into groups and asked to design a mobile website interface. My classmate Lorenzo Baratti and I chose to design a website for a web-dev company called DevGenius",
+    "FIGMA_2TITLEMODAL": "Planning and development"
 }
