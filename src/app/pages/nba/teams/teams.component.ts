@@ -20,6 +20,14 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTeams();
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    if (favorites.length > 0) {
+      this.teams.forEach(team => {
+        if (favorites.includes(team.id)) {
+          team.favorite = true;
+        }
+      });
+    }
   }
 
   getTeams(): void {
