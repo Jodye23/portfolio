@@ -19,42 +19,24 @@ export class TeamsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getTeams();
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-
-    if (favorites.length > 0) {
-      this.teams.forEach(team => {
-        team.favorite = favorites.includes(team.id);
-      });
-    }
+    this.nbaService.getTeams().subscribe((teams: Team[]) => {
+      this.teams = teams;
+      this.applyFavoritesFromStorage();
+    });
   }
 
   getTeams(): void {
     this.nbaService.getTeams().subscribe((teams: Team[]) => {
       this.teams = teams;
-      const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-      this.teams.forEach(team => {
-        if (favorites.includes(team.id)) {
-          team.favorite = true;
-        }
-      });
+      this.applyFavoritesFromStorage();
     });
   }
 
-  applyFilter(): void {
-    if (this.filterTerm) {
-      const filteredTeams = this.teams.filter(team =>
-        team.conference.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
-        team.division.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
-        team.full_name.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
-        team.name.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
-        team.city.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
-        team.abbreviation.toLowerCase().includes(this.filterTerm.toLowerCase())
-      );
-      this.teams = [...filteredTeams];
-    } else {
-      this.getTeams();
-    }
+  applyFavoritesFromStorage(): void {
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    this.teams.forEach(team => {
+      team.favorite = favorites.includes(team.id);
+    });
   }
 
   resetFilter(): void {
