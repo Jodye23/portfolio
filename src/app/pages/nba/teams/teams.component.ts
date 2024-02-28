@@ -20,12 +20,6 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTeams();
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    this.teams.forEach(team => {
-      if (favorites.includes(team.id)) {
-        team.favorite = true;
-      }
-    });
   }
 
   getTeams(): void {
@@ -42,7 +36,7 @@ export class TeamsComponent implements OnInit {
 
   applyFilter(): void {
     if (this.filterTerm) {
-      this.teams = this.teams.filter(team =>
+      const filteredTeams = this.teams.filter(team =>
         team.conference.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
         team.division.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
         team.full_name.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
@@ -50,6 +44,7 @@ export class TeamsComponent implements OnInit {
         team.city.toLowerCase().includes(this.filterTerm.toLowerCase()) ||
         team.abbreviation.toLowerCase().includes(this.filterTerm.toLowerCase())
       );
+      this.teams = [...filteredTeams];
     } else {
       this.getTeams();
     }
