@@ -45,9 +45,11 @@ export class TeamsComponent implements OnInit {
   }
 
   toggleFavorite(team: Team): void {
+    console.log('Toggle Favorite Called');
     team.favorite = !team.favorite;
     const favorites = this.teams.filter(t => t.favorite).map(t => t.id);
     localStorage.setItem('favorites', JSON.stringify(favorites));
+    console.log('Favorites:', favorites);
   }
 
 }
