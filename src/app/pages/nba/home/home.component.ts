@@ -8,11 +8,21 @@ import { PhotoService } from 'src/app/demo/service/photo.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  selectedCategoryTitle: string = '';
+  displayModal: boolean = false;
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['it', 'en']);
     this.translate.setDefaultLang('it');
   }
 
+  openModal(category: string) {
+    this.selectedCategoryTitle = category;
+    this.displayModal = true;
+  }
+
+  closeModal() {
+    this.displayModal = false;
+  }
 
 }
